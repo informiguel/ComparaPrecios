@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Precio por Unidad</string>
+    <string name="app_name">Compara precios</string>
     <string name="unit_type">Unidad:</string>
     <string name="weight">Peso</string>
     <string name="volume">Volumen</string>
@@ -11,7 +11,7 @@
     <string name="price">Precio</string>
     <string name="quantity">Cantidad</string>
     <string name="size_per_quantity">Medida</string>
-    <string name="items_ordered_by_best_ratio">Artículos ordenados por mejor relación</string>
+    <string name="items_ordered_by_best_ratio">Artículos ordenados</string>
     <string name="show_in">Mostrar:</string>
     <string name="settings">Ajustes</string>
     <string name="settings_and_about">Ajustes &amp; Acerca de</string>

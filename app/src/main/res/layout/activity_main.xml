@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="net.nitratine.ComparaPrecios.MainActivity">
+    tools:context="com.pijama.ComparaPrecios.MainActivity">
 
     <ScrollView
         android:layout_width="0dp"
@@ -34,12 +34,12 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="4dp"
-                android:background="@color/colorPrimary"
-                android:padding="4dp"
+                android:background="@android:color/holo_red_dark"
+                android:padding="14dp"
                 android:text="@string/app_name"
                 android:textAlignment="center"
                 android:textColor="@android:color/white"
-                android:textSize="12sp" />
+                android:textSize="22sp" />
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -89,7 +89,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="4dp"
-                app:mrl_rippleBackground="@color/colorPrimary"
+                app:mrl_rippleBackground="@color/colorItem"
                 app:mrl_rippleColor="#FFFFFF"
                 app:mrl_rippleDelayClick="false">
 
@@ -211,7 +211,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="4dp"
                 android:layout_marginTop="4dp"
-                app:mrl_rippleBackground="@color/colorPrimary"
+                app:mrl_rippleBackground="@android:color/holo_red_dark"
                 app:mrl_rippleColor="#FFFFFF"
                 app:mrl_rippleDelayClick="false">
 
@@ -236,7 +236,7 @@
                             android:gravity="center|end"
                             android:text="@string/settings"
                             android:textColor="@android:color/white"
-                            android:textSize="16sp" />
+                            android:textSize="20sp" />
 
                         <ImageView
                             android:id="@+id/imageView"

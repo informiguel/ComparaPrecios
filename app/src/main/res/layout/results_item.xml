@@ -7,20 +7,29 @@
 
     <TextView
         android:id="@+id/resultItemName"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_weight="1"
         android:text="TextView"
-        android:textAlignment="textEnd"
+        android:gravity="right"
         android:textColor="@android:color/white" />
 
     <TextView
-        android:id="@+id/resultItemValue"
-        android:layout_width="wrap_content"
+        android:id="@+id/resultItemValue1"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_weight="1"
         android:paddingLeft="6dp"
         android:text="TextView"
-        android:textAlignment="textStart"
+        android:gravity="right"
+        android:textColor="@android:color/white" />
+    <TextView
+        android:id="@+id/resultItemValue2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:paddingLeft="6dp"
+        android:text="TextView"
+        android:gravity="left"
         android:textColor="@android:color/white" />
 </LinearLayout>

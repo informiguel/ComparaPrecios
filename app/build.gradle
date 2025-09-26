@@ -4,17 +4,21 @@ def keystorePropertiesFile = rootProject.file("keystore.properties")
 def keystoreProperties = new Properties()
 
 android {
-	namespace 'ComparaPrecios'
+	namespace 'com.pijama.ComparaPrecios'
     compileSdkVersion 36
     buildToolsVersion "36.1.0"
     defaultConfig {
         applicationId "com.pijama.ComparaPrecios"
-        minSdkVersion 19
-        targetSdk 36
+        minSdk 33
+        //noinspection OldTargetApi
+        targetSdk 33
         versionCode 1
         versionName "1.0.0"
         testInstrumentationRunner 'androidx.test.runner.AndroidJUnitRunner'
         vectorDrawables.useSupportLibrary = true
+        buildFeatures {
+            buildConfig = true
+        }
     }
     signingConfigs {
         release {
@@ -49,12 +53,25 @@ android {
 }
 
 dependencies {
+    // Añade el Kotlin BOM para gestionar las versiones de las bibliotecas de Kotlin
+    // Elige la versión más reciente o la que cause menos conflictos (e.g., 1.8.22)
+    implementation platform('org.jetbrains.kotlin:kotlin-bom:1.8.22')
+
+    // Aunque no uses Kotlin directamente, esto ayuda a alinear las versiones transitivas
+    implementation 'org.jetbrains.kotlin:kotlin-stdlib'
+
     implementation fileTree(dir: 'libs', include: ['*.jar'])
-    androidTestImplementation('androidx.test.espresso:espresso-core:3.1.0', {
-        exclude group: 'com.android.support', module: 'support-annotations'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.5'
+    androidTestImplementation 'androidx.test:runner:1.5.2' // Or the latest version
+    androidTestImplementation 'androidx.test:rules:1.5.0'   // Or the latest version
+    // Espresso
+    androidTestImplementation('androidx.test.espresso:espresso-core:3.5.1', { // Or the latest version
+            exclude group: 'com.android.support', module: 'support-annotations' // This exclude might no longer be necessary
     })
-    implementation 'androidx.appcompat:appcompat:1.2.0'
-    implementation 'androidx.constraintlayout:constraintlayout:2.0.4'
-    testImplementation 'junit:junit:4.12'
+
+    implementation 'androidx.appcompat:appcompat:1.7.1'
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
+
+    testImplementation 'junit:junit:4.13.2'
     implementation 'com.balysv:material-ripple:1.0.2'
 }

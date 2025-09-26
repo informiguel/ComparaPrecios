@@ -6,7 +6,7 @@
     android:layout_marginTop="4dp"
     android:background="#32a1a1a1"
     android:orientation="vertical"
-    android:padding="2dp">
+    android:padding="1dp">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -16,32 +16,37 @@
         <EditText
             android:id="@+id/nameEditText"
             android:layout_width="0dp"
-            android:layout_height="wrap_content"
+            android:layout_height="24dp"
             android:layout_weight="2"
+            android:background="@color/colorItem"
             android:ems="10"
             android:hint="@string/item_name"
             android:inputType="textPersonName"
-            android:textSize="16sp" />
+            android:textColor="@color/white"
+            android:textColorHint="@color/white"
+            android:textSize="16sp"
+            android:textStyle="bold" />
 
         <Spinner
             android:id="@+id/unitSpnr"
+            android:layout_height="24dp"
             android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:backgroundTint="@android:color/black" />
+
+            android:layout_weight="1" />
 
     </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
+        android:layout_height="25dp"
+        android:orientation="horizontal" >
 
         <EditText
             android:id="@+id/priceEditText"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
+            android:background="@color/white"
             android:ems="10"
             android:hint="@string/price"
             android:inputType="numberDecimal"
@@ -49,26 +54,39 @@
             android:textSize="16sp" />
 
         <EditText
-            android:id="@+id/quantityEditText"
-            android:layout_width="wrap_content"
+            android:id="@+id/sizePerQtyEditText"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
+            android:background="@color/white"
+            android:ems="10"
+            android:hint="@string/size_per_quantity"
+            android:inputType="numberDecimal"
+            android:textAlignment="center"
+            android:textSize="16sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:gravity="center"
+            android:text=" x "
+            android:textColor="#DDAA00"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/quantityEditText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@color/white"
             android:ems="10"
             android:hint="@string/quantity"
             android:inputType="numberDecimal"
             android:textAlignment="center"
             android:textSize="16sp" />
 
-        <EditText
-            android:id="@+id/sizePerQtyEditText"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:ems="10"
-            android:hint="@string/size_per_quantity"
-            android:inputType="numberDecimal"
-            android:textAlignment="center"
-            android:textSize="16sp" />
     </LinearLayout>
 
     <LinearLayout
@@ -79,7 +97,7 @@
         <TextView
             android:id="@+id/ratiotextView"
             android:layout_width="0dp"
-            android:layout_height="wrap_content"
+            android:layout_height="25dp"
             android:layout_weight="2"
             android:padding="2dp"
             android:textAlignment="center"
@@ -98,25 +116,28 @@
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:background="@android:color/transparent"
+                android:background="@color/colorPrimary"
                 android:scaleY="-1"
-                app:srcCompat="@drawable/arrow_upward" />
+                app:srcCompat="@drawable/arrow_upward"
+                app:tint="@color/white" />
 
             <ImageButton
                 android:id="@+id/moveUpBtn"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:background="@android:color/transparent"
-                app:srcCompat="@drawable/arrow_upward" />
+                android:background="@color/blue_navy"
+                app:srcCompat="@drawable/arrow_upward"
+                app:tint="@color/white" />
 
             <ImageButton
                 android:id="@+id/deleteBtn"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:background="@android:color/transparent"
-                app:srcCompat="@drawable/delete" />
+                android:background="@color/red"
+                app:srcCompat="@drawable/delete"
+                app:tint="@color/white" />
 
         </LinearLayout>
 

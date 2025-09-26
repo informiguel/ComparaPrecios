@@ -19,7 +19,7 @@
     <string name="rounding">Rounding (d.p.)</string>
     <string name="show_results_tile">Show Results Tile</string>
     <string name="remember_data">Remember Data</string>
-    <string name="version">Version %1$s</string>
+    <string name="version">Version: %1$s</string>
     <string name="rate_this_app">Rate This App</string>
     <string name="bug_reporting">Bug Reporting</string>
     <string name="developers_site">Developers Site</string>

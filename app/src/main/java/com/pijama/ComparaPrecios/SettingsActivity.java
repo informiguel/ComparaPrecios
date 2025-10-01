@@ -61,7 +61,7 @@ public class SettingsActivity extends AppCompatActivity {
             public void afterTextChanged(Editable s) {
 
             }
-        }); // CIERRE de la CLASE anónima.CIERRE de los ARGUMENTOS del método. FIN de la SENTENCIA.
+        }); // CIERRE de la CLASE anónima.CIERRE de los ARGUMENTOS. FIN de la SENTENCIA.
 
         roundingValueSpinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override

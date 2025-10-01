@@ -9,8 +9,8 @@
     <string name="add_item">Adicionar Item</string>
     <string name="item_name">Nome do Item</string>
     <string name="price">Preço</string>
-    <string name="quantity">Quantidade</string>
-    <string name="size_per_quantity">Medida</string>
+    <string name="unidades">Quantidade</string>
+    <string name="cantidad">Medida</string>
     <string name="items_ordered_by_best_ratio">Itens Ordenados por Melhor Proporção</string>
     <string name="show_in">Exibir:</string>
     <string name="settings">Configurações</string>

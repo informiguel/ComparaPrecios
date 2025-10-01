@@ -27,20 +27,22 @@ public class SettingsActivity extends AppCompatActivity {
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setTitle(getString(R.string.settings_and_about));
 
-        final EditText currencyValueTextEdit = (EditText) findViewById(R.id.currencyValueTextEdit);
-        final Spinner roundingValueSpinner = (Spinner) findViewById(R.id.roundingValueSpinner);
-        final Switch showResultsValueSwitch = (Switch) findViewById(R.id.showResultsValueSwitch);
-        final Switch rememberDataValueSwitch = (Switch) findViewById(R.id.rememberDataValueSwitch);
+        final EditText currencyValueTextEdit = findViewById(R.id.currencyValueTextEdit);
+        final Spinner roundingValueSpinner = findViewById(R.id.roundingValueSpinner);
+        final Switch showResultsValueSwitch = findViewById(R.id.showResultsValueSwitch);
+        final Switch rememberDataValueSwitch = findViewById(R.id.rememberDataValueSwitch);
         final TextView versionTag = findViewById(R.id.versionTag);
 
-        String[] items = new String[] {"1", "2", "3", "4", "5", "6"};
-        ArrayAdapter<String> adapter = new ArrayAdapter<>(this, R.layout.spinner_item, items);
+        String[] decimales = new String[] {"1", "2", "3", "4", "5", "6"};
+        ArrayAdapter<String> adapter = new ArrayAdapter<>(this, R.layout.spinner_item, decimales);
         roundingValueSpinner.setAdapter(adapter);
 
         currencyValueTextEdit.setText(Settings.currencySymbol);
         roundingValueSpinner.setSelection(adapter.getPosition(String.valueOf(Settings.rounding)));
         showResultsValueSwitch.setChecked(Settings.showResultsTile);
         rememberDataValueSwitch.setChecked(Settings.rememberData);
+
+
         versionTag.setText(getString(R.string.version, BuildConfig.VERSION_NAME));
 
         currencyValueTextEdit.addTextChangedListener(new TextWatcher() {
@@ -59,7 +61,7 @@ public class SettingsActivity extends AppCompatActivity {
             public void afterTextChanged(Editable s) {
 
             }
-        });
+        }); // CIERRE de la CLASE anónima.CIERRE de los ARGUMENTOS del método. FIN de la SENTENCIA.
 
         roundingValueSpinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
@@ -90,12 +92,6 @@ public class SettingsActivity extends AppCompatActivity {
             }
         });
 
-        findViewById(R.id.rateLayout).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                rate(view);
-            }
-        });
 
         findViewById(R.id.bugReportLayout).setOnClickListener(new View.OnClickListener() {
             @Override
@@ -131,10 +127,6 @@ public class SettingsActivity extends AppCompatActivity {
         return true;
     }
 
-    protected void rate(View view) {
-        Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse(getString(R.string.play_store_location)));
-        startActivity(browserIntent);
-    }
 
     protected void bugReport(View view) {
         Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse(getString(R.string.bug_reporting_url)));
@@ -151,7 +143,7 @@ public class SettingsActivity extends AppCompatActivity {
         webView.loadData(getString(R.string.licenses_html), "text/html", null);
         //AlertDialog.Builder mAlertDialog = new AlertDialog.Builder(this, R.style.Theme_AppCompat_Light_Dialog_Alert);
         AlertDialog.Builder mAlertDialog = new AlertDialog.Builder(this);
-        mAlertDialog.setTitle("Licenses");
+        mAlertDialog.setTitle("Licencia");
         mAlertDialog.setView(webView);
         mAlertDialog.setPositiveButton(android.R.string.ok, null);
         mAlertDialog.show();

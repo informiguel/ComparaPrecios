@@ -9,10 +9,10 @@
     <string name="add_item">Añadir artículo</string>
     <string name="item_name">Nombre del artículo</string>
     <string name="price">Precio</string>
-    <string name="quantity">Cantidad</string>
-    <string name="size_per_quantity">Medida</string>
+    <string name="unidades">Unidades</string>
+    <string name="cantidad">Cantidad</string>
     <string name="items_ordered_by_best_ratio">Artículos ordenados</string>
-    <string name="show_in">Mostrar:</string>
+    <string name="show_in">En: </string>
     <string name="settings">Ajustes</string>
     <string name="settings_and_about">Ajustes &amp; Acerca de</string>
     <string name="currency_symbol">Símbolo de Moneda</string>

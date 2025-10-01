@@ -9,8 +9,8 @@
     <string name="add_item">Add Item</string>
     <string name="item_name">Item Name</string>
     <string name="price">Price</string>
-    <string name="quantity">Quantity</string>
-    <string name="size_per_quantity">Size Per Qty</string>
+    <string name="unidades">Quantity</string>
+    <string name="cantidad">Size Per Qty</string>
     <string name="items_ordered_by_best_ratio">Items Ordered by Best Ratio</string>
     <string name="show_in">Show in:</string>
     <string name="settings">Settings</string>
@@ -24,9 +24,8 @@
     <string name="bug_reporting">Bug Reporting</string>
     <string name="developers_site">Developers Site</string>
     <string name="licenses">Licenses</string>
-    <string name="play_store_location" translatable="false">https://play.google.com/store/apps/details?id=net.nitratine.priceperunit</string>
-    <string name="developer_site_url" translatable="false">https://nitratine.net/</string>
-    <string name="bug_reporting_url" translatable="false">https://github.com/brentvollebregt/price-per-unit/issues</string>
+    <string name="developer_site_url" translatable="false">https://informiguel.blogspot.com/</string>
+    <string name="bug_reporting_url" translatable="false">https://github.com/informiguel/ComparaPrecios/issues</string>
     <string name="licenses_html" translatable="false"><![CDATA[
     <html>
     <head>
@@ -48,6 +47,17 @@
         Version 2.0, January 2004
     </h3>
     <ul>
+    <li>
+            <b>Aplicación </b>
+            <br/>
+             Este producto es una adaptación de la app Price-per-unit
+             Desarrollado originalmente por:
+                  https://nitratine.net/
+                  https://github.com/brentvollebregt/price-per-unit
+              Y modificado por:
+                  https://informiguel.blogspot.com/
+                  https://github.com/informiguel/ComparaPrecios
+        </li>
         <li>
             <b>material-design-icons</b>
             <br/>

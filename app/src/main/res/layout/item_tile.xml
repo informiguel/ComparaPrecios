@@ -60,7 +60,7 @@
             android:layout_weight="1"
             android:background="@color/white"
             android:ems="10"
-            android:hint="@string/size_per_quantity"
+            android:hint="@string/cantidad"
             android:inputType="numberDecimal"
             android:textAlignment="center"
             android:textSize="16sp" />
@@ -82,7 +82,7 @@
             android:layout_weight="1"
             android:background="@color/white"
             android:ems="10"
-            android:hint="@string/quantity"
+            android:hint="@string/unidades"
             android:inputType="numberDecimal"
             android:textAlignment="center"
             android:textSize="16sp" />

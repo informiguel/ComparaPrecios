@@ -1,7 +1,5 @@
 package com.pijama.ComparaPrecios;
 
-import static com.pijama.ComparaPrecios.R.id.resultItemValue2;
-
 import android.content.Intent;
 import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
@@ -24,7 +22,7 @@ public class MainActivity extends AppCompatActivity {
 
     LinearLayout itemLayout;
     Spinner unitTypeSpinner;
-    Units unitWorker;
+    UnidadesDeMedida unitWorker;
 
     // flags
     String currentCurrencySymbol;
@@ -38,7 +36,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         getSupportActionBar().hide();
 
-        unitWorker = new Units(getApplicationContext());
+        unitWorker = new UnidadesDeMedida(getApplicationContext());
 
         Settings.setUp(this);
         Settings.pullSettings();
@@ -49,18 +47,18 @@ public class MainActivity extends AppCompatActivity {
         itemLayout = (LinearLayout) findViewById(R.id.itemLayout);
         unitTypeSpinner = (Spinner) findViewById(R.id.unitTypeSpnr);
 
-        String[] items = unitWorker.unitTypes.toArray(new String[0]);
+        String[] items = unitWorker.tiposUnidades.toArray(new String[0]);
         ArrayAdapter<String> adapter = new ArrayAdapter<>(this, R.layout.spinner_item, items);
         unitTypeSpinner.setAdapter(adapter);
 
         ItemStorage is = new ItemStorage(this);
-        ArrayList<com.pijama.ComparaPrecios.ItemStructure> data = is.getData();
+        ArrayList<ItemStructure> data = is.getData();
 
         if (data.size() > 0 && Settings.rememberData) {
             String unit = data.get(0).unit;
-            for (int i = 0 ; i < unitWorker.units.size(); i++) {
-                if (unitWorker.units.get(i).contains(unit)) {
-                    unitTypeSpinner.setSelection(getSpinnerIndex(unitTypeSpinner, unitWorker.unitTypes.get(i)));
+            for (int i = 0; i < unitWorker.unidadesMedida.size(); i++) {
+                if (unitWorker.unidadesMedida.get(i).contains(unit)) {
+                    unitTypeSpinner.setSelection(getSpinnerIndex(unitTypeSpinner, unitWorker.tiposUnidades.get(i)));
                 }
             }
 
@@ -385,8 +383,8 @@ public class MainActivity extends AppCompatActivity {
         String unitType = unitTypeSpinner.getSelectedItem().toString();
         Spinner unitSpinner = (Spinner) view.findViewById(R.id.unitSpnr);
 
-        int index = unitWorker.unitTypes.indexOf(unitType);
-        String[] items = unitWorker.units.get(index).toArray(new String[0]);
+        int index = unitWorker.tiposUnidades.indexOf(unitType);
+        String[] items = unitWorker.unidadesMedida.get(index).toArray(new String[0]);
 
         ArrayAdapter<String> adapter = new ArrayAdapter<>(this, android.R.layout.simple_spinner_dropdown_item, items);
         unitSpinner.setAdapter(adapter);
@@ -395,6 +393,7 @@ public class MainActivity extends AppCompatActivity {
     protected void itemModified(View view) {
         // When an item/unit is modified, recalculate
         LinearLayout itemTile = (LinearLayout) view;
+        
 
         if (getBasedItemValueValid(itemTile)) {
             //Si hay datos correctos para hacer los cálculos
@@ -404,7 +403,7 @@ public class MainActivity extends AppCompatActivity {
 
                         ((TextView) itemTile.findViewById(R.id.ratiotextView)).setText(
                     // PRIMERA CONVERSIÓN: Precio por unidad (Ej: 15€/kg)
-                        roundToString(unitWorker.convert(unitWorker.getBaseUnit(unit), unit, baseUnitValue2))
+                        roundToString(unitWorker.convert2(unitWorker.getBaseUnit(unit), unit, baseUnitValue2))
                             + Settings.currencySymbol + "/" + unit
 
                             // DIVISOR
@@ -462,8 +461,8 @@ public class MainActivity extends AppCompatActivity {
         }
 
         String unitType = unitTypeSpinner.getSelectedItem().toString();
-        int index = unitWorker.unitTypes.indexOf(unitType);
-        String[] items = unitWorker.units.get(index).toArray(new String[0]);
+        int index = unitWorker.tiposUnidades.indexOf(unitType);
+        String[] items = unitWorker.unidadesMedida.get(index).toArray(new String[0]);
 
         ArrayAdapter<String> adapter = new ArrayAdapter<>(this, R.layout.results_spinner_item, items);
         ( (Spinner) findViewById(R.id.resultsUnitSpinner) ).setAdapter(adapter);
@@ -491,7 +490,7 @@ public class MainActivity extends AppCompatActivity {
             }
         }
 
-        Double bestValue1, bestValue2;  // la mayor cantidad por 1 moneda y el mayor precio por 1 unidad
+        Double bestValue1, bestValue2;  // la mayor cantidad por 1 moneda y el mayor precio por unidad
         int bestValueIndex;  //lugar en la lista donde está la mayor cantidad por 1 moneda
         // se va a ordenar de mejor a peor: de menor precio y de más cantidad por moneda
         while (itemTiles.size() > 0) {
@@ -510,11 +509,12 @@ public class MainActivity extends AppCompatActivity {
             //nombre del elemento
             ( (TextView) recentlyAdded.findViewById(R.id.resultItemName) ).setText(( (EditText) itemTiles.get(bestValueIndex).findViewById(R.id.nameEditText) ).getText().toString() + ": ") ;
 
-            //menor precio (monedas por cantidad)
-            ( (TextView) recentlyAdded.findViewById(R.id.resultItemValue1) ).setText(roundToString(unitWorker.convert(baseUnit, requestedUnit, bestValue2)) + Settings.currencySymbol + "/" + requestedUnit + " <-->");
-            //más cantidad (cantidad por moneda)
-            ( (TextView) recentlyAdded.findViewById(resultItemValue2) ).setText(roundToString(unitWorker.convert(baseUnit, requestedUnit, bestValue1)) + requestedUnit + "/" + Settings.currencySymbol);
-            itemTiles.remove(bestValueIndex); //quita de la lista el elemento ya procesado
+            //menor precio (monedas por unidad de cantidad)
+            ( (TextView) recentlyAdded.findViewById(R.id.resultItemValue1) ).setText(roundToString(unitWorker.convert2(baseUnit, requestedUnit, bestValue2)) + Settings.currencySymbol + "/" + requestedUnit + " <-->");
+            //más cantidad (cantidad por unidad de moneda)
+            ( (TextView) recentlyAdded.findViewById(R.id.resultItemValue2) ).setText(roundToString(unitWorker.convert(baseUnit, requestedUnit, bestValue1)) + requestedUnit + "/" + Settings.currencySymbol);
+
+            itemTiles.remove(bestValueIndex); //borra de la lista el elemento ya procesado
         }
     }
 
@@ -545,17 +545,17 @@ public class MainActivity extends AppCompatActivity {
         String quantityText = ( (EditText) itemTile.findViewById(R.id.quantityEditText) ).getText().toString();
         String amountPerQtyText = ( (EditText) itemTile.findViewById(R.id.sizePerQtyEditText) ).getText().toString().replaceAll("[^0-9.,]", "");
 
-        Double price = Double.parseDouble(priceText);
-        Double quantity = Double.parseDouble(quantityText);
-        Double amountPerQty = Double.parseDouble(amountPerQtyText);
-        Double unitPerDollar = (quantity * amountPerQty) / price;
+        Double precio = Double.parseDouble(priceText);
+        Double cantidad = Double.parseDouble(quantityText);
+        Double unidades = Double.parseDouble(amountPerQtyText);
+        Double unidadesPorEuro = (cantidad * unidades) / precio;
         String unit = ((Spinner) itemTile.findViewById(R.id.unitSpnr)).getSelectedItem().toString();
 
-        return unitWorker.convertToBase(unit, unitPerDollar);
+        return unitWorker.convertToBase(unit, unidadesPorEuro);
     }
 
        private Double getBasedItemValue2(View view) {
-        //calcula el dinero necesario por 1 medida (15€/kg)
+        //calcula el dinero necesario por una medida (15€/kg)
         if (!getBasedItemValueValid(view)) {
             return 0.0;
         }
@@ -564,15 +564,15 @@ public class MainActivity extends AppCompatActivity {
         String quantityText = ( (EditText) itemTile.findViewById(R.id.quantityEditText) ).getText().toString();
         String amountPerQtyText = ( (EditText) itemTile.findViewById(R.id.sizePerQtyEditText) ).getText().toString().replaceAll("[^0-9.,]", "");
 
-        Double price = Double.parseDouble(priceText);
-        Double quantity = Double.parseDouble(quantityText);
-        Double amountPerQty = Double.parseDouble(amountPerQtyText);
-        Double DollarsPerUnit = price / (quantity * amountPerQty);
+        Double precio = Double.parseDouble(priceText);
+        Double cantidad = Double.parseDouble(quantityText);
+        Double unidades = Double.parseDouble(amountPerQtyText);
+        Double convertido = cantidad * unidades;
+        Double EurosPorUnidad = precio / convertido;
         String unit = ((Spinner) itemTile.findViewById(R.id.unitSpnr)).getSelectedItem().toString();
 
-        return unitWorker.convertToBase(unit, DollarsPerUnit);
+        return unitWorker.convertRateToBase(unit, EurosPorUnidad);
     }
-
     private String roundToString(Double value) {
         StringBuilder format = new StringBuilder("#.#");
         for (int i = 0; i < Settings.rounding - 1; i++) {

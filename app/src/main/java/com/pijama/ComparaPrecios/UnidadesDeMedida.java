@@ -4,17 +4,17 @@ import android.content.Context;
 
 import java.util.ArrayList;
 
-public class Units {
+public class UnidadesDeMedida {
 
-    public ArrayList<String> unitTypes = new ArrayList<>();
-    public ArrayList<ArrayList<String>> units = new ArrayList<>();
-    private ArrayList<ArrayList<Double>> unitBaseRelativity = new ArrayList<>();
+    public ArrayList<String> tiposUnidades = new ArrayList<>();
+    public ArrayList<ArrayList<String>> unidadesMedida = new ArrayList<>();
+    private ArrayList<ArrayList<Double>> unidadBaseRelativa = new ArrayList<>();
 
-    public Units(Context context) {
-        unitTypes.add(context.getResources().getString(R.string.weight));
-        unitTypes.add(context.getResources().getString(R.string.volume));
-        unitTypes.add(context.getResources().getString(R.string.length));
-        unitTypes.add(context.getResources().getString(R.string.pieces));
+    public UnidadesDeMedida(Context context) {
+        tiposUnidades.add(context.getResources().getString(R.string.weight));
+        tiposUnidades.add(context.getResources().getString(R.string.volume));
+        tiposUnidades.add(context.getResources().getString(R.string.length));
+        tiposUnidades.add(context.getResources().getString(R.string.pieces));
 
         ArrayList<String> units_weight = new ArrayList<>();
         ArrayList<Double> units_weight_relativity = new ArrayList<>();
@@ -30,8 +30,8 @@ public class Units {
         units_weight_relativity.add(0.0022046249999752);
         units_weight.add("st"); // Stone
         units_weight_relativity.add(0.00015747321428394284561);
-        units.add(units_weight); // Match the first index as "Weight" is in unitTypes
-        unitBaseRelativity.add(units_weight_relativity);
+        unidadesMedida.add(units_weight); // Match the first index as "Weight" is in unitTypes
+        unidadBaseRelativa.add(units_weight_relativity);
 
         ArrayList<String> units_volume = new ArrayList<>();
         ArrayList<Double> units_volume_relativity = new ArrayList<>();
@@ -51,8 +51,8 @@ public class Units {
         units_volume_relativity.add(2.0000011519999958409);
         units_volume.add("gal (Imp)"); // gallon (Imperial)
         units_volume_relativity.add(0.21996937500137433985);
-        units.add(units_volume);
-        unitBaseRelativity.add(units_volume_relativity);
+        unidadesMedida.add(units_volume);
+        unidadBaseRelativa.add(units_volume_relativity);
 
         ArrayList<String> units_length = new ArrayList<>();
         ArrayList<Double> units_length_relativity = new ArrayList<>();
@@ -70,28 +70,28 @@ public class Units {
         units_length_relativity.add(1.093613888889);
         units_length.add("mi"); // mile
         units_length_relativity.add(0.00062137152777784086452);
-        units.add(units_length);
-        unitBaseRelativity.add(units_length_relativity);
+        unidadesMedida.add(units_length);
+        unidadBaseRelativa.add(units_length_relativity);
 
         ArrayList<String> units_pieces = new ArrayList<>();
         ArrayList<Double> units_pieces_relativity = new ArrayList<>();
         units_pieces.add("pcs");
         units_pieces_relativity.add(1.0);
-        units.add(units_pieces);
-        unitBaseRelativity.add(units_pieces_relativity);
+        unidadesMedida.add(units_pieces);
+        unidadBaseRelativa.add(units_pieces_relativity);
     }
 
     public Double convert(String unitA, String unitB, Double value) {
         Double unitARelativity = 1.0;
         Double unitBRelativity = 1.0;
-        for (ArrayList<String> unitGroup: units) {
+        for (ArrayList<String> unitGroup: unidadesMedida) {
             if (unitGroup.contains(unitA)) {
                 // Get the item in unitTypes where the index matches the ArrayList we found the item in units
-                int positionIndex = units.indexOf(unitGroup);
+                int positionIndex = unidadesMedida.indexOf(unitGroup);
                 int unitAIndex = unitGroup.indexOf(unitA);
                 int unitBIndex = unitGroup.indexOf(unitB);
-                unitARelativity = unitBaseRelativity.get(positionIndex).get(unitAIndex);
-                unitBRelativity = unitBaseRelativity.get(positionIndex).get(unitBIndex);
+                unitARelativity = unidadBaseRelativa.get(positionIndex).get(unitAIndex);
+                unitBRelativity = unidadBaseRelativa.get(positionIndex).get(unitBIndex);
             }
         }
 
@@ -101,8 +101,9 @@ public class Units {
         return value;
     }
 
+
     public Double convertToBase(String unit, Double value) {
-        for (ArrayList<String> unitGroup : units) {
+        for (ArrayList<String> unitGroup : unidadesMedida) {
             if (unitGroup.contains(unit)) {
                 value = convert(unit, unitGroup.get(0),value);
             }
@@ -110,10 +111,46 @@ public class Units {
 
         return value;
     }
+    //Para convertir TARIFAS €/A a €/B
+    public Double convert2(String unitA, String unitB, Double value) {
+        Double unitARelativity = 1.0;
+        Double unitBRelativity = 1.0;
 
+        for (ArrayList<String> unitGroup: unidadesMedida) {
+            if (unitGroup.contains(unitA) && unitGroup.contains(unitB)) {
+                int positionIndex = unidadesMedida.indexOf(unitGroup);
+                int unitAIndex = unitGroup.indexOf(unitA);
+                int unitBIndex = unitGroup.indexOf(unitB);
+
+                unitARelativity = unidadBaseRelativa.get(positionIndex).get(unitAIndex);
+                unitBRelativity = unidadBaseRelativa.get(positionIndex).get(unitBIndex);
+                // LÓGICA INVERSA para tarifas (€/A a €/B):
+                // 1. Convertir de A a la Base: Multiplicar por el factor de A.
+                value = value * unitARelativity;
+                // 2. Convertir de la Base a B: Dividir por el factor de B.
+                value = value / unitBRelativity;
+                return value;
+            }
+        }
+        return value;
+    }
+//Convierte una tarifa €/Unidad a €/Base. Necesaria para el cálculo del bestValue2
+    public Double convertRateToBase(String unit, Double value) {
+        for (ArrayList<String> unitGroup : unidadesMedida) {
+            if (unitGroup.contains(unit)) {
+                String baseUnit = unitGroup.get(0);
+                // Usamos convert2 (la lógica inversa) para convertir la tarifa a la unidad base.
+                // unit: unidad original del producto seleccionado (ej: "kg")
+                // baseUnit: unidad base del grupo a la hora de ver mejor resultado (ej: "g")
+                value = convert2(unit, baseUnit, value);
+                return value;
+            }
+        }
+        return value;
+    }
     public String getBaseUnit(String unit) {
         String baseUnit = "";
-        for (ArrayList<String> unitGroup : units) {
+        for (ArrayList<String> unitGroup : unidadesMedida) {
             if (unitGroup.contains(unit)) {
                 baseUnit = unitGroup.get(0);
             }

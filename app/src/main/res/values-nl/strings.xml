@@ -9,8 +9,8 @@
     <string name="add_item">Artikel toevoegen</string>
     <string name="item_name">Naam artikel</string>
     <string name="price">Bedrag</string>
-    <string name="quantity">Hoeveelheid</string>
-    <string name="size_per_quantity">Afmeting per hoeveelheid</string>
+    <string name="unidades">Hoeveelheid</string>
+    <string name="cantidad">Afmeting per hoeveelheid</string>
     <string name="items_ordered_by_best_ratio">Artikelen geordend op beste verhouding</string>
     <string name="show_in">Toon in:</string>
     <string name="settings">Instellingen</string>

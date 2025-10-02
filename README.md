@@ -1,5 +1,5 @@
-<h1>Price Per Unit</h1>
-<p>A simple Android app that helps you compare prices of similar products</p>
+<h1>Compara precios</h1>
+<p>Una APP sencilla que te permite compara precios de productos cuando tienen diferentes cantidades</p>
 
 <div align="center">
     <img src="published_graphics/Portada.png" alt="Portada" width="80%">

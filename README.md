@@ -1,5 +1,5 @@
 <h1>Compara precios</h1>
-<p>Una APP sencilla que te permite compara precios de productos cuando tienen diferentes cantidades</p>
+<p>Una APP sencilla que te permite comparar precios de productos cuando tienen diferentes cantidades y no sabes cual sería el más barato</p>
 
 <div align="center">
     <img src="published_graphics/Portada.png" alt="Portada" width="80%">

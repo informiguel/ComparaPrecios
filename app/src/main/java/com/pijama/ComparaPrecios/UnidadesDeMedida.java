@@ -75,7 +75,7 @@ public class UnidadesDeMedida {
 
         ArrayList<String> units_pieces = new ArrayList<>();
         ArrayList<Double> units_pieces_relativity = new ArrayList<>();
-        units_pieces.add("pcs");
+        units_pieces.add("pzas");
         units_pieces_relativity.add(1.0);
         unidadesMedida.add(units_pieces);
         unidadBaseRelativa.add(units_pieces_relativity);

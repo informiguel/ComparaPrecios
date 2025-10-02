@@ -1,18 +1,19 @@
-Compare unlimited items to find the best price! Save money in a smart way.
+Compare an unlimited number of products to find the best price. Save money smartly.
 
-Simply give a name (optional), enter in the cost, amount and size of each item and the unit per dollar will be calculated. This then sorts those based off best value for you to easily find the best price! Three numbers is all that is required to get an accurate answer.
+We often come across products that are sold at different prices depending on the quantity, and it's difficult to know which one is cheaper.
 
-This app is ideal to find the best price in supermarkets but will work just in well at other stores that sell the same type of items for different prices or you can even compare prices from different stores.
+With the "Compare Prices" app, you can give each product a name (optional), enter the price, quantity, and number of units for each item. The app will automatically calculate the price based on the total product quantity and the currency obtained by the chosen currency. Items are then sorted based on the best value so you can easily find the best price.
 
 Features include:
+* 4 types of units (Weight, Volume, Length, and Pieces).
+* Easy currency symbol change.
+* Price summary for each product (price/unit of measure and quantity/price).
+* You can see all items at the best price sorted to a single unit of measure.
+* Change the number of decimal places for rounding.
+* Save data after closing the app.
+* The app does not require permissions. No permissions!
+* The app shows no ads. No ads!
+* The app does not collect personal data. No spying!
 
-* No permissions!
-* No Ads!
-* 4 unit types (Weight, Volume, Length and Pieces)
-* Easily change the currency symbol
-* Summary of calculated unit/$
-* Can view all items converted to one single unit
-* Remember data after the app is closed
-* Change rounding dp
-
+This app is ideal for finding the best price in supermarkets, online stores, or anywhere.
 This app has no ads, requires no permissions, and collects no data.

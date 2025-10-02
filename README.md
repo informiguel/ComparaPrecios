@@ -1,46 +1,51 @@
-<h1 align="center">Price Per Unit</h1>
-<p align="center">A simple Android app that helps you compare prices of similar products</p>
+<h1>Price Per Unit</h1>
+<p>A simple Android app that helps you compare prices of similar products</p>
 
 <div align="center">
-    <img src="https://github.com/brentvollebregt/price-per-unit/blob/master/published_graphics/FeatureGraphic.png?raw=true" alt="Header Image">
+    <img src="published_graphics/Portada.png" alt="Portada" width="80%">
 </div>
+
 
 <p align="center">
     <a href="https://f-droid.org/en/packages/net.nitratine.priceperunit/"><img src="https://nitratine.net/posts/price-per-unit/get-it-on-f-droid.png" alt="Get it on F-Droid" height="100"></a>
-    <a href="https://play.google.com/store/apps/details?id=net.nitratine.priceperunit"><img src="https://nitratine.net/posts/price-per-unit/get-it-on-google-play.png" alt="Get it on Google Play" height="100"></a>
 </p>
 
-<p align="center">
-    <a href="https://nitratine.net/price-per-unit/">Related post on Nitratine.net</a>
-</p>
 
-## Introduction
-I really wanted some more practice with the Android SDK so I decided to make something that I would have liked to have.
+## Introducción
+El origen de esta APP es un trabajo realizado por: [Brent Vollebregt](https://nitratine.net/). Si quieres acceder a su código: https://github.com/brentvollebregt/price-per-unit
+Aprovecho para dar gracias a Brent Vollebregt por su trabajo e invito a todos a ver su página web donde tiene cosas muy interesantes. Gracias.
 
-This app compares prices for similar items and will calculate the price per unit for each item. These values can then be compared to find the best value for money. Simply give a name (optional), enter in the cost, amount and size of each item and the unit per dollar will be calculated.
+Mi intención era adaptar la APP "price-per-unit" a mi gusto y necesidades.
+El resultado es lo que ves, la APP "Compara precios".
+El cambio verdaderamente importante es que ahora se muestra el precio por unidad de medida, por ejemplo 12€/kg.
+El resto son pequeñas modificaciones
 
-This app is ideal to find the best price in supermarkets but will work just in well at other stores that sell the same type of items for different prices or you can even compare prices from different stores.
+## Capturas de pantalla
 
-## Screenshots
-
-| ![Gallery Item 1](https://github.com/brentvollebregt/price-per-unit/blob/master/published_graphics/Gallery1.png?raw=true) | ![Gallery Item 2](https://github.com/brentvollebregt/price-per-unit/blob/master/published_graphics/Gallery2.png?raw=true) | ![Gallery Item 3](https://github.com/brentvollebregt/price-per-unit/blob/master/published_graphics/Gallery3.png?raw=true) | ![Gallery Item 4](https://github.com/brentvollebregt/price-per-unit/blob/master/published_graphics/Gallery4.png?raw=true) |
+| ![Gallery Item 1](published_graphics/kefiryoferta.jpg) | ![Gallery Item 2](published_graphics/lechebrikbotella.jpg) | ![Gallery Item 3](published_graphics/piezas3.jpg) | ![Gallery Item 4](published_graphics/Ajustes.jpg) |
 |---------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------|
 
-## Features
-- 4 unit types (Weight, Volume, Length and Pieces) with sub units
-- Easily change the currency symbol
-- Summary of calculated unit/$
-- Can view all items converted to one single unit
-- Remember data after the app is closed
-- Change rounding dp
-- No permissions!
-- No Ads!
-- Collects no data!
+## Características
+Compare un número ilimitado de productos para encontrar el mejor precio. Ahorre dinero de forma inteligente.
 
-## Development
+Muchas veces nos encontramos con productos que se venden a distintos precios según la cantidad y se hace difícil saber que producto es más barato.
 
-To build this you will need to be using Java 1.8.
-You can get a JRE from https://adoptium.net/temurin/releases/.
-After setting JAVA_HOME to the root of the JDK (the folder that contains bin, include, jre, etc),
-go into Android Studio and select Settings -> Build, Execution, Deployment -> Build Tools -> Gradle
-and set the Gradle JDK to JAVA_HOME (which should be 1.8).
+Con la APP "Compara precios", puede dar un nombre (opcional) a cada producto, introducir el precio, la cantidad y cuantas unidades de cada artículo. La APP calculará automáticamente el precio por la cantidad total de producto y la cantidad obtenida por moneda elegida. A continuación, se clasifican los artículos en función del mejor valor para que pueda encontrar fácilmente el mejor precio.
+
+Las características incluyen:
+* 4 tipos de unidades (Peso, Volumen, Longitud y Piezas).
+* Cambio fácil del símbolo de la moneda.
+* Resumen del precio de cada producto (precio/unidad de medida y cantidad/precio).
+* Puede ver todos los artículos al mejor precio ordenados a una sola unidad de medida.
+* Cambiar el número de decimales para el redondeo.
+* Recuerde los datos después de cerrar la aplicación.
+* La APP no necesita permisos. ¡Sin permisos!
+* La APP no muestra publicidad. ¡Sin anuncios!
+* La APP no recoge datos personales. ¡No espía!
+
+Esta aplicación es ideal para encontrar el mejor precio en los supermercados, tiendas online, o en cualquier sitio.
+Esta aplicación no tiene anuncios, no requiere permisos, y no recoge datos.
+
+## Desarrollo
+
+Android Studio

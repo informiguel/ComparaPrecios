@@ -253,6 +253,37 @@
                     app:mrl_rippleColor="#FFFFFF">
 
                     <LinearLayout
+                        android:id="@+id/ayudaLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:layout_marginTop="4dp"
+                        android:layout_weight="1"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="0.13"
+                            app:srcCompat="@drawable/ayuda_white" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="0.87"
+                            android:gravity="center_vertical"
+                            android:paddingLeft="8dp"
+                            android:text="@string/ayuda"
+                            android:textColor="@android:color/white"
+                            android:textSize="18sp" />
+                    </LinearLayout>
+                </com.balysv.materialripple.MaterialRippleLayout>
+
+                <com.balysv.materialripple.MaterialRippleLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:mrl_rippleColor="#FFFFFF">
+
+                    <LinearLayout
                         android:id="@+id/developerSiteLayout"
                         android:layout_width="match_parent"
                         android:layout_height="40dp"

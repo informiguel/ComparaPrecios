@@ -22,6 +22,8 @@ public class UnidadesDeMedida {
         units_weight_relativity.add(1.0);
         units_weight.add("kg");
         units_weight_relativity.add(0.001);
+        units_weight.add("kg");
+        units_weight_relativity.add(0.001);
         units_weight.add("t"); // toneladas
         units_weight_relativity.add(0.000001);
         units_weight.add("oz"); // Ounce
@@ -37,6 +39,8 @@ public class UnidadesDeMedida {
         ArrayList<Double> units_volume_relativity = new ArrayList<>();
         units_volume.add("l");
         units_volume_relativity.add(1.0);
+        units_volume.add("cl");
+        units_volume_relativity.add(100.0);
         units_volume.add("ml");
         units_volume_relativity.add(1000.0);
         units_volume.add("fl oz (US)"); // fluid oz (US)

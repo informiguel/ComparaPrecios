@@ -22,6 +22,7 @@
     <string name="version">Versie %1$s</string>
     <string name="rate_this_app">Beoordeel deze app</string>
     <string name="bug_reporting">Bug melden</string>
+    <string name="ayuda">Hulp</string>
     <string name="developers_site">Webpagina ontwikkelaar</string>
     <string name="licenses">Licentie</string>
 </resources>

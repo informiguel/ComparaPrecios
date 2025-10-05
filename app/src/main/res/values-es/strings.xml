@@ -22,6 +22,7 @@
     <string name="version">Versión %1$s</string>
     <string name="rate_this_app">Evaluar esta app</string>
     <string name="bug_reporting">Reportar problemas</string>
+    <string name="ayuda">Ayuda</string>
     <string name="developers_site">Sitio del desarrollador</string>
     <string name="licenses">Licencia</string>
 </resources>

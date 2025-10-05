@@ -5,5 +5,5 @@ public class ItemStructure {
     public String price;
     public String quantity;
     public String size;
-    public String unit;
+    public String unit; //unidad de medida
 }

@@ -13,12 +13,13 @@
 
 ## Introducción
 El origen de esta APP es un trabajo realizado por: [Brent Vollebregt](https://nitratine.net/). Si quieres acceder a su código: https://github.com/brentvollebregt/price-per-unit
+
 Aprovecho para dar gracias a Brent Vollebregt por su trabajo e invito a todos a ver su página web donde tiene cosas muy interesantes. Gracias.
 
 Mi intención era adaptar la APP "price-per-unit" a mi gusto y necesidades.
 El resultado es lo que ves, la APP "Compara precios".
 El cambio verdaderamente importante es que ahora se muestra el precio por unidad de medida, por ejemplo 12€/kg.
-El resto son pequeñas modificaciones
+El resto son pequeñas modificaciones.
 
 ## Capturas de pantalla
 

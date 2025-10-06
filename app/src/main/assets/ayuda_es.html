@@ -1,231 +1,238 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
 <head>
-	<meta http-equiv="content-type" content="text/html; charset=utf-8"/>
-	<title></title>
-	<meta name="generator" content="LibreOffice 25.2.5.2 (Windows)"/>
-	<meta name="created" content="2025-10-02T20:49:32.086683800"/>
-	<meta name="changed" content="2025-10-05T22:22:53.331879600"/>
-	<style type="text/css">
-		@page { margin: 2cm }
-		h1 { margin-bottom: 0.21cm; background: transparent }
-		h1.western { font-family: "Liberation Sans", sans-serif; font-size: 18pt }
-		h1.cjk { font-size: 18pt; font-family: "Microsoft YaHei" }
-		h1.ctl { font-family: "Lucida Sans"; font-size: 18pt }
-		p { background: transparent; line-height: 115%; margin-bottom: 0.25cm }
-	</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ayuda | Compara Precios</title>
+    
+    <style>
+        /* ===================================================
+           1. VARIABLES CSS (Modo Claro/Oscuro Adaptativo)
+           =================================================== */
+        :root {
+            /* Modo Claro (Valores por defecto) */
+            --color-text: #2c3e50;
+            --color-background: #ffffff;
+            --color-card-bg: #f5f8fa;
+            --color-shadow: rgba(0, 0, 0, 0.1);
+            --color-heading: #34495e;
+            --color-border: #ecf0f1;
+            --color-link: #3498db;
+        }
+
+        /* Soporte para Modo Oscuro (Se aplica automáticamente con la preferencia del sistema) */
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --color-text: #ecf0f1;
+                --color-background: #202b38; /* Fondo más oscuro que el texto */
+                --color-card-bg: #2c3e50;
+                --color-shadow: rgba(255, 255, 255, 0.1);
+                --color-heading: #ecf0f1;
+                --color-border: #3d5162;
+                --color-link: #5dade2;
+            }
+        }
+
+        /* ===================================================
+           2. ESTILOS BÁSICOS & TIPOGRAFÍA
+           =================================================== */
+        body {
+            font-family: 'Roboto', sans-serif; /* Fuente legible */
+            line-height: 1.6;
+            margin: 0;
+            padding: 16px; /* Espacio para el WebView */
+            background-color: var(--color-background);
+            color: var(--color-text);
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        header h1 {
+            color: var(--color-heading);
+            border-bottom: 2px solid var(--color-border);
+            padding-bottom: 10px;
+            font-size: 1.8em;
+        }
+
+        h2 {
+            color: var(--color-heading);
+            margin-top: 25px;
+            margin-bottom: 10px;
+            font-size: 1.4em;
+        }
+        
+        ul, ol {
+            padding-left: 20px;
+            margin-bottom: 15px;
+        }
+        
+        li {
+            margin-bottom: 8px;
+        }
+        
+        a {
+            color: var(--color-link);
+        }
+
+        /* ===================================================
+           3. ESTILOS PARA IMÁGENES & RESPONSIVE
+           =================================================== */
+        .image-container {
+            display: block;
+            margin: 20px 0;
+            padding: 10px;
+            background-color: var(--color-card-bg);
+            border-radius: 8px;
+            /* Sombra suave para un look moderno */
+            box-shadow: 0 4px 8px var(--color-shadow); 
+            overflow: hidden; 
+        }
+
+        .responsive-img {
+            max-width: 100%; /* Totalmente responsive */
+            height: auto;
+            display: block;
+            margin: 0 auto;
+            border-radius: 4px;
+        }
+        
+        /* ===================================================
+           4. FOOTER
+           =================================================== */
+        footer {
+            margin-top: 40px;
+            padding-top: 15px;
+            border-top: 1px solid var(--color-border);
+            font-size: 0.85em;
+            text-align: center;
+        }
+    </style>
 </head>
-<body lang="es-ES" dir="ltr"><h1 class="western">Funcionamiento</h1>
-<p style="line-height: 100%; margin-bottom: 0cm">Compara precios es
-la APP que le ayudará a elegir el producto más barato en relación
-con otros productos de idénticas características que se venden con
-distintas cantidades de producto. 
-</p>
-<p style="line-height: 100%; margin-bottom: 0cm">No te vuelvas a
-equivocar al elegir entre varios productos de similar calidad pero
-con diferentes cantidades de producto.</p>
-<p style="line-height: 100%; margin-bottom: 0cm"><img src="leona.png" name="Imagen7" align="left" width="220" height="231" border="0">
-  <br clear="left"/>
-</img>
-<br/>
+<body>
 
-</p>
-<p style="line-height: 100%; margin-bottom: 0cm">Vamos a ver como
-funciona.</p>
-<p style="line-height: 100%; margin-bottom: 0cm"><br/>
+    <header>
+        <h1>Ayuda: Compara Precios</h1>
+    </header>
 
-</p>
-<p style="line-height: 100%; margin-bottom: 0cm">Imagine que va al
-supermercado y ve el Kéfir con una oferta de 3 unidades por 4,50€,
-mientras que una sola unidad se vende a 1,68€. ¿Merece la pena la
-oferta?</p>
-<p style="line-height: 100%; margin-bottom: 0cm"><img src="ayuda_es_kefir.png" name="Imagen1" align="left" width="218" height="137" border="0">
-  <br clear="left"/>
-</img>
-<br/>
+    <main>
+        <section>
+            <h2>Funcionamiento de la App</h2>
+            <p><strong>Compara precios</strong> es la <em>app</em> que te ayudará a elegir el producto más <strong>barato</strong> en relación con otros productos de idénticas características que se venden con distintas cantidades.</p>
+            <p>No vuelvas a equivocarte al elegir entre varios productos de similar calidad pero con diferentes cantidades de producto.</p>
+            
+            <div class="image-container">
+                <img src="leona.png" alt="Icono de la aplicación" class="responsive-img">
+            </div>
+            
+            <p>A continuación, veremos un ejemplo de cómo utilizar la app.</p>
+        </section>
 
-</p>
-<p style="line-height: 100%; margin-bottom: 0cm">Ahí es donde la APP
-“Compara precios” le puede ayudar. 
-</p>
-<p style="line-height: 100%; margin-bottom: 0cm">En primer lugar se
-pulsa sobre el botón “Añadir artículos” y rellenamos los
-datos:</p>
-<ul>
-	<li><p style="line-height: 100%; margin-bottom: 0cm">El nombre del
-	producto(en realidad no hace falta, es opcional).</p></li>
-	<li><p style="line-height: 100%; margin-bottom: 0cm">El precio.</p></li>
-	<li><p style="line-height: 100%; margin-bottom: 0cm">La cantidad.</p></li>
-	<li><p style="line-height: 100%; margin-bottom: 0cm">El número de
-	unidades que vienen en el producto o en la oferta (por defecto 1).</p></li>
-</ul>
-<p style="line-height: 100%; margin-bottom: 0cm">Para meter mas
-productos a la comparación basta con pulsar sobre el botón “Añadir
-artículo” y meter sus datos.</p>
-<p style="line-height: 100%; margin-bottom: 0cm">¿Qué sale más
-económico?</p>
-<p style="line-height: 100%; margin-bottom: 0cm"><img src="ayuda_es_kefirAPP.gif" name="Imagen2" align="left" width="215" height="212" border="0">
-  <br clear="left"/>
-</img>
-<br/>
+        <section>
+            <h2>Ejemplo 1: Oferta de Kéfir</h2>
+            <p>Imagina que ves el Kéfir con una oferta de 3 unidades por <strong>4,50 €</strong>, mientras que una sola unidad se vende a <strong>1,68 €</strong>. ¿Merece la pena la oferta?</p>
+            
+            <div class="image-container">
+                <img src="ayuda_es_kefir.png" alt="Oferta de Kéfir en el supermercado" class="responsive-img">
+            </div>
 
-</p>
-<p style="line-height: 100%; margin-bottom: 0cm">En la sección
-“Artículos ordenados” aparecen los resultados ordenados
-partiendo de los más económicos. La información que se muestra es:</p>
-<ul>
-	<li><p style="line-height: 100%; margin-bottom: 0cm">Nombre del
-	producto.</p></li>
-	<li><p style="line-height: 100%; margin-bottom: 0cm">Relación €
-	de coste por Kg de producto.</p></li>
-	<li><p style="line-height: 100%; margin-bottom: 0cm">Relación
-	cantidad en Kg por cada euro de coste.</p></li>
-</ul>
-<p style="line-height: 100%; margin-bottom: 0cm">Puede ver que el
-“Item2” (nombre por defecto) es el primero, por tanto el más
-barato. Se corresponde con la oferta de 3 envases de 400 g. Sale más
-barato (3,75€/kg) que comprar uno solo por 1,68€ (4,2€/kg).
-Fíjese que para el resultado final se ha elegido como medida el kg,
-pero se podría haber puesto gramos (g).</p>
-<p style="line-height: 100%; margin-bottom: 0cm"><br/>
+            <p>La <em>app</em> “Compara Precios” te ayudará. Los pasos son sencillos:</p>
+            
+            <ol>
+                <li>Pulsa el botón <strong>“Añadir artículos”</strong>.</li>
+                <li>Rellena los siguientes datos por producto:
+                    <ul>
+                        <li>El <strong>nombre del producto</strong> (opcional).</li>
+                        <li>El <strong>precio</strong> del producto.</li>
+                        <li>La <strong>cantidad</strong> de producto que trae.</li>
+                        <li>El <strong>número de unidades</strong> que vienen en el pack u oferta (por defecto es 1).</li>
+                    </ul>
+                </li>
+            </ol>
 
-</p>
-<p style="line-height: 100%; margin-bottom: 0cm">Si quiere empezar de
-nuevo, pulse el botón “Limpiar” y se borrarán todos los
-productos.</p>
-<p style="line-height: 100%; margin-bottom: 0cm">Si quiere borrar
-solo un producto, pulse en la papelera que está al lado del
-producto.</p>
-<p style="line-height: 100%; margin-bottom: 0cm">Si quiere cambiar el
-orden de los productos en pantalla, utilice las flechas, aunque esto
-no va a cambiar los resultados.</p>
-<p style="line-height: 100%; margin-bottom: 0cm"><br/>
+            <p>Para meter más productos a la comparación, pulsa el botón <strong>“Añadir artículo”</strong> y mete sus datos.</p>
 
-</p>
-<p style="line-height: 100%; margin-bottom: 0cm">El programa por
-defecto trabaja con 3 decimales y con euros (€), pero si necesita
-más precisión, basta con pulsar el botón de “Ajustes” y en
-“Redondeo” cambie el número de decimales. En la ventana de
-ajustes es donde podrá adaptar a su gusto la APP. Puede cambiar el
-tipo de carácter para la moneda (€ por defecto), puede elegir
-mostrar ordenados los resultados de mejor a peor y recordar los datos
-aunque cierre la APP. 
-</p>
-<p style="line-height: 100%; margin-bottom: 0cm">Además en la misma
-ventana se informa de la versión de la APP, dónde reportar errores,
-la ayuda, el sitio web del desarrollador y la licencia.</p>
-<p style="line-height: 100%; margin-bottom: 0cm">Esta es la pantalla
-de Ajustes:</p>
-<p style="line-height: 100%; margin-bottom: 0cm"><img src="ayuda_es_ajustes.jpg" name="Imagen3" align="left" width="213" height="285" border="0">
-  <br clear="left"/>
-</img>
-<br/>
+            <h3>Resultado de la comparación</h3>
+            <div class="image-container">
+                <img src="ayuda_es_kefirAPP.gif" alt="Resultados de la comparación de Kéfir en la APP" class="responsive-img">
+            </div>
 
-</p>
-<p style="line-height: 100%; margin-bottom: 0cm">Vamos con otro
-ejemplo: 
-</p>
-<p style="line-height: 100%; margin-bottom: 0cm">En el supermercado
-ve que el yougurt griego está en 2 formatos diferentes:</p>
-<ul>
-	<li><p style="line-height: 100%; margin-bottom: 0cm">Formato de 6
-	envases de 125 gramos que cuesta en total 1,55€.</p></li>
-	<li><p style="line-height: 100%; margin-bottom: 0cm">Formato de 1Kg
-	que cuesta 2,30€.</p></li>
-</ul>
-<p style="line-height: 100%; margin-bottom: 0cm"><br/>
+            <p>En la sección <strong>“Artículos ordenados”</strong> aparecen los resultados ordenados de <strong>más económicos a menos</strong>.</p>
+            <p>La información que se muestra en la lista es:</p>
+            <ol>
+                <li>Nombre del producto.</li>
+                <li>Relación € de coste por Kg de producto.</li>
+                <li>Relación cantidad en Kg por cada euro de coste.</li>
+            </ol>
+            <p>El <strong>“Item2”</strong> (nombre por defecto) es el primero y, por lo tanto, el más barato. Corresponde a la oferta de 3 envases de 400 g (3,75 €/kg). Sale más barato que comprar uno solo por 1,68 € (4,2 €/kg). Observa que la medida elegida para el resultado final es el kg, pero podrías haber elegido gramos (g).</p>
+        </section>
+        
+        <section>
+            <h2>Opciones y Ajustes</h2>
+            <p>Si quieres empezar de nuevo, pulsa el botón <strong>“Limpiar”</strong> para borrar todos los productos.</p>
+            <p>Para borrar solo un producto, pulsa el icono de la <strong>papelera</strong> que está al lado del producto. Las flechas sirven para cambiar el orden de los productos en pantalla, pero esto no afecta a los resultados.</p>
 
-</p>
-<p style="line-height: 100%; margin-bottom: 0cm">¿Cuál es más
-barato? Es difícil de responder ya que comparar los precios
-directamente sería un error ya que tienen diferente peso total.</p>
-<p style="line-height: 100%; margin-bottom: 0cm"><img src="ayuda_es_griego.png" name="Imagen5" align="left" width="222" height="107" border="0">
-  <br clear="left"/>
-</img>
-<br/>
+            <p>El programa trabaja por defecto con <strong>3 decimales</strong> y con <strong>euros (€)</strong>. Para adaptar la APP a tu gusto, pulsa el botón de <strong>“Ajustes”</strong>:</p>
+            <ul>
+                <li>Cambiar el tipo de carácter para la moneda (€ por defecto).</li>
+                <li>Elegir la precisión de los decimales en <strong>“Redondeo”</strong>.</li>
+                <li>Activar o desactivar el ordenamiento automático de los resultados.</li>
+                <li>Elegir si la APP debe <strong>recordar</strong> los datos aunque se cierre.</li>
+            </ul>
+            <p>Además, en la ventana de ajustes se informa de la versión de la APP, dónde reportar errores, la ayuda, el sitio web del desarrollador y la licencia.</p>
+            
+            <div class="image-container">
+                <img src="ayuda_es_ajustes.png" alt="Pantalla de Ajustes de la APP" class="responsive-img">
+            </div>
+        </section>
 
-</p>
-<p style="line-height: 100%; margin-bottom: 0cm">Así de fácil la
-APP nos resuelve la duda mostrando un resumen ordenado de mejor a
-peor precio, donde podemos ver que:</p>
-<ul>
-	<li><p style="line-height: 100%; margin-bottom: 0cm">El griego 6: el
-	pack de los 6 yogures, sale el kg a 2,067€/kg. Por un € nos dan
-	0,484 kg de procducto.</p></li>
-	<li><p style="line-height: 100%; margin-bottom: 0cm">El griego 1: El
-	envase, supuestamente de ahorro, al ser 1kg, cuesta a 2,3€/kg. Por
-	un € nos dan 0,435 kg de producto.</p></li>
-</ul>
-<p style="line-height: 100%; margin-bottom: 0cm"><br/>
+        <section>
+            <h2>Ejemplo 2: Yogur Griego</h2>
+            <p>Hay 2 formatos de yogur griego:</p>
+            <ul>
+                <li>Formato de 6 envases de 125 gramos (total <strong>1,55 €</strong>).</li>
+                <li>Formato de 1 kg (total <strong>2,30 €</strong>).</li>
+            </ul>
+            <p>Es un error comparar los precios directamente, ya que tienen diferente peso total.</p>
+            <div class="image-container">
+                <img src="ayuda_es_griego.png" alt="Comparativa de yogur griego" class="responsive-img">
+            </div>
 
-</p>
-<p style="line-height: 100%; margin-bottom: 0cm">Fijese que a la hora
-de meter un producto, en “Unidad” elegimos el tipo de medida
-(Peso, Volumen, Longitud, Piezas) y después para cada producto puede
-elegir la unidad concreta, por ejemplo, para peso puede elegir gramos
-(g), kilogramos (kg), toneladas (t), etc. Y en el resultado final
-“Artículos ordenado” puede elegir la unidad de medida que sirve
-para unificar criterios. En el ejemplo, los 6 yogures pesan 125
-gramos cada uno y se eligió como medida gramos (g), el bote grande
-pesa 1kg y se eligió como medida kg. En el resultado final se eligió
-como medida comparativa kg. 
-</p>
-<p style="line-height: 100%; margin-bottom: 0cm"><img src="ayuda_es_griegoAPP.png" name="Imagen4" align="left" width="229" height="286" border="0">
-  <br clear="left"/>
-</img>
-<br/>
+            <p>La <em>app</em> muestra un resumen ordenado de mejor a peor precio:</p>
+            <ul>
+                <li><strong>El griego 6</strong> (el pack de los 6 yogures): el kg sale a <strong>2,067 €/kg</strong>. Por un euro obtienes 0,484 kg de producto.</li>
+                <li><strong>El griego 1</strong> (el envase de 1 kg): el kg cuesta <strong>2,3 €/kg</strong>. Por un euro obtienes 0,435 kg de producto.</li>
+            </ul>
+            
+            <p>Al introducir un producto, en <strong>“Unidad”</strong> eliges el tipo de medida (Peso, Volumen, Longitud, Piezas) y después la unidad concreta (gramos, kilogramos, etc.). La unidad de medida para el resultado final (en este caso, kg) debe ser la misma para todos los productos para que la comparación tenga sentido.</p>
+            
+            <div class="image-container">
+                <img src="ayuda_es_griegoAPP.png" alt="Resultados de la APP Yogur Griego" class="responsive-img">
+            </div>
+        </section>
 
-</p>
-<p style="line-height: 100%; margin-bottom: 0cm">Un último ejemplo,
-en una web se encuentra que hay 3 formatos de botella de agua, 33 cl,
-50 cl y 1 litro.</p>
-<p style="line-height: 100%; margin-bottom: 0cm"><img src="ayuda_es_agua.png" name="Imagen6" align="left" width="226" height="231" border="0">
-  <br clear="left"/>
-</img>
-<br clear="left"/>
-Meta
-los datos en la APP y ya sabrá en que envase le cuesta menos el
-agua.</p>
-<p style="line-height: 100%; margin-bottom: 0cm">Fíjese que al meter
-los datos de cada producto, en 2 casos se tomó como unidad de medida
-“cl” (centilitros) y en otro “l” (litro). 
-</p>
-<p style="line-height: 100%; margin-bottom: 0cm">En el resultado
-final, la unidad de medida que se eligió fue litros, pero podría
-haber sido centilitros o mililitros, no importa. El caso es que para
-el resultado final, la unidad de medida elegida tiene que ser una, la
-misma, de otra forma no tendría sentido compararlos. 
-</p>
-<p style="line-height: 100%; margin-bottom: 0cm">P<img src="ayuda_es_aguaAPP.png" name="Imagen8" align="left" width="230" height="367" border="0">
-  <br clear="left"/>
-</img>
-ues
-bien, resulta que la botella de 33 cl, que en la APP el usuario
-introdujo con el nombre “item 33” (recuerde que no es
-obligatorio), es la más barata.</p>
-<p style="line-height: 100%; margin-bottom: 0cm">Fíjese también que
-algún resultado aparece con una precisión de 5 decimales, esto es
-que porque en “Ajustes” se hizo el redondeo a 5. Usted elige la
-moneda, que por defecto es el euro (€) y el redondeo en los
-cálculos, que por defecto es 3.</p>
-<p style="line-height: 100%; margin-bottom: 0cm"><br/>
+        <section>
+            <h2>Ejemplo 3: Botella de Agua</h2>
+            <p>Comparamos 3 formatos de botellas de agua: <strong>33 cl</strong>, <strong>50 cl</strong> y <strong>1 litro</strong>.</p>
+            <div class="image-container">
+                <img src="ayuda_es_agua.png" alt="Formatos de botella de agua" class="responsive-img">
+            </div>
 
-</p>
-<p style="line-height: 100%; margin-bottom: 0cm">Como puede ver,
-gracias a esta APP podrá elegir el producto más económico.</p>
-<p style="line-height: 100%; margin-bottom: 0cm"><br/>
+            <p>Introduce los datos y sabrás qué envase te cuesta menos.</p>
+            <p>Al introducir los datos, se usó <strong>“cl”</strong> (centilitros) en dos casos y <strong>“l”</strong> (litro) en el otro. El resultado final se unifica a la unidad de medida que elijas (en este ejemplo, litros).</p>
+            
+            <div class="image-container">
+                <img src="ayuda_es_aguaAPP.png" alt="Resultados de la APP Agua" class="responsive-img">
+            </div>
+            
+            <p>Resulta que la botella de 33 cl, introducida como <strong>“item 33”</strong>, es la más barata.</p>
+            <p>Como puedes ver, gracias a esta APP podrás elegir el producto más económico.</p>
+        </section>
+    </main>
+    
+    <footer>
+        <p>2025 Asturias, España (<a href="https://github.com/informiguel/ComparaPrecios">informiguel</a>)</p>
+    </footer>
 
-</p>
-<p style="line-height: 100%; margin-bottom: 0cm">2025 Asturias,
-España (<a href="https://github.com/informiguel/ComparaPrecios">informiguel</a>)</p>
-<p style="line-height: 100%; margin-bottom: 0cm"><br/>
-
-</p>
-<p style="line-height: 100%; margin-bottom: 0cm"><br/>
-
-</p>
-<p style="line-height: 100%; margin-bottom: 0cm"><br/>
-
-</p>
 </body>
 </html>

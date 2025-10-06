@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="ast">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aida | Compara Precios</title>
+    
+    <style>
+        /* ===================================================
+           1. VARIABLES CSS (Modu Clar/Escuru Adautativu)
+           =================================================== */
+        :root {
+            /* Modu Clar (Valores por defeutu) */
+            --color-text: #2c3e50;
+            --color-background: #ffffff;
+            --color-card-bg: #f5f8fa;
+            --color-shadow: rgba(0, 0, 0, 0.1);
+            --color-heading: #34495e;
+            --color-border: #ecf0f1;
+            --color-link: #3498db;
+        }
+
+        /* Sofitu pal Modu Escuru (Aplícase automáticamente) */
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --color-text: #ecf0f1;
+                --color-background: #202b38;
+                --color-card-bg: #2c3e50;
+                --color-shadow: rgba(255, 255, 255, 0.1);
+                --color-heading: #ecf0f1;
+                --color-border: #3d5162;
+                --color-link: #5dade2;
+            }
+        }
+
+        /* ===================================================
+           2. ESTILOS BÁSICOS & TIPOGRAFÍA
+           =================================================== */
+        body {
+            font-family: 'Roboto', sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 16px;
+            background-color: var(--color-background);
+            color: var(--color-text);
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        header h1 {
+            color: var(--color-heading);
+            border-bottom: 2px solid var(--color-border);
+            padding-bottom: 10px;
+            font-size: 1.8em;
+        }
+
+        h2 {
+            color: var(--color-heading);
+            margin-top: 25px;
+            margin-bottom: 10px;
+            font-size: 1.4em;
+        }
+        
+        ul, ol {
+            padding-left: 20px;
+            margin-bottom: 15px;
+        }
+        
+        li {
+            margin-bottom: 8px;
+        }
+        
+        a {
+            color: var(--color-link);
+        }
+
+        /* ===================================================
+           3. ESTILOS PA IMIÁXENES & RESPONSIVE
+           =================================================== */
+        .image-container {
+            display: block;
+            margin: 20px 0;
+            padding: 10px;
+            background-color: var(--color-card-bg);
+            border-radius: 8px;
+            box-shadow: 0 4px 8px var(--color-shadow); 
+            overflow: hidden; 
+        }
+
+        .responsive-img {
+            max-width: 100%; 
+            height: auto;
+            display: block;
+            margin: 0 auto;
+            border-radius: 4px;
+        }
+        
+        /* ===================================================
+           4. FOOTER
+           =================================================== */
+        footer {
+            margin-top: 40px;
+            padding-top: 15px;
+            border-top: 1px solid var(--color-border);
+            font-size: 0.85em;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Aida: Compara Precios</h1>
+    </header>
+
+    <main>
+        <section>
+            <h2>Funcionamientu de l'App</h2>
+            <p><strong>Compara precios</strong> ye l'aplicación que t'aidará a escoyer el productu más <strong>baratu</strong> en rellación con otros productos d'idéntiques carauterístiques que se vienden con distintes cantidaes.</p>
+            <p>Nun vuelvas a equivocarte al escoyer ente dellos productos de calidá asemeyada, pero con diferentes cantidaes de productu.</p>
+            
+            <div class="image-container">
+                <img src="leona.png" alt="Iconu de l'aplicación" class="responsive-img">
+            </div>
+            
+            <p>Darréu, vamos ver un exemplu de cómo usar l'<em>app</em>.</p>
+        </section>
+
+        <section>
+            <h2>Exemplu 1: Ufiesta de Kéfir</h2>
+            <p>Imaxina que ves el Kéfir con una ufiesta de 3 unidaes por <strong>4,50 €</strong>, mientres qu'una sola unidá se viende a <strong>1,68 €</strong>. ¿Merez la pena l'ufiesta?</p>
+            
+            <div class="image-container">
+                <img src="ayuda_es_kefir.png" alt="Ufiesta de Kéfir nel supermercáu" class="responsive-img">
+            </div>
+
+            <p>Ehí ye onde l'aplicación “Compara Precios” te pue ayudar. Los pasos son cenciellos:</p>
+            
+            <ol>
+                <li>Preme'l botón <strong>“Añadir artículos”</strong>.</li>
+                <li>Fai'l rexistru de los siguientes datos per productu:
+                    <ul>
+                        <li>El <strong>nome del productu</strong> (opcional).</li>
+                        <li>El <strong>preciu</strong> del productu.</li>
+                        <li>La <strong>cantidá</strong> de productu que trai.</li>
+                        <li>El <strong>númberu d'unidaes</strong> que vienen nel pack o ufiesta (por defeutu ye 1).</li>
+                    </ul>
+                </li>
+            </ol>
+
+            <p>Pa meter más productos a la comparanza, preme'l botón <strong>“Añadir artículu”</strong> y mete los sos datos.</p>
+
+            <h3>Resultáu de la comparanza</h3>
+            <div class="image-container">
+                <img src="ayuda_es_kefirAPP.gif" alt="Resultaos de la comparanza de Kéfir en l'APP" class="responsive-img">
+            </div>
+
+            <p>Na seición <strong>“Artículos ordenaos”</strong> apaecen los resultaos ordenaos de <strong>más económicos a menos</strong>.</p>
+            <p>La información que se muestra na llista ye:</p>
+            <ol>
+                <li>Nome del productu.</li>
+                <li>Rellación € de coste per Kg de productu.</li>
+                <li>Rellación cantidá en Kg per cada euru de coste.</li>
+            </ol>
+            <p>L'<strong>“Item2”</strong> (nome por defeutu) ye'l primeru y, poro, el más baratu. Correspuéndese cola ufiesta de 3 envases de 400 g (3,75 €/kg). Sal más baratu que mercar ún solu por 1,68 € (4,2 €/kg). Date cuenta que la midida escoyida pal resultáu final ye'l kg, pero podríes escoyer gramos (g).</p>
+        </section>
+        
+        <section>
+            <h2>Opciones y Axustes</h2>
+            <p>Si quies entamar de nueves, preme'l botón <strong>“Llimpiar”</strong> p'esborrar tolos productos.</p>
+            <p>Pa esborrar un solu productu, preme'l iconu de la <strong>papelera</strong> que ta al llau del productu. Les fleches valen pa camudar l'orde de los productos en pantalla, pero esto nun afeuta a los resultaos.</p>
+
+            <p>El programa trabaya por defeutu con <strong>3 decimales</strong> y con <strong>euros (€)</strong>. P'adautar l'<em>app</em> al to gustu, preme'l botón d'<strong>“Axustes”</strong>:</p>
+            <ul>
+                <li>Camudar el tipu de caráuter pa la moneda (€ por defeutu).</li>
+                <li>Escoyer la precisión de los decimales en <strong>“Redondeu”</strong>.</li>
+                <li>Activar o desactivar l'ordenamientu automáticu de los resultaos.</li>
+                <li>Escoyer si l'<em>app</em> tien que <strong>recordar</strong> los datos anque se pieslle.</li>
+            </ul>
+            <p>Amás, na ventana d'axustes infórmase de la versión de l'<em>app</em>, au reportar errores, l'aida, el sitiu web del desarrollador y la llicencia.</p>
+            
+            <div class="image-container">
+                <img src="ayuda_es_ajustes.jpg" alt="Pantalla d'Axustes de l'APP" class="responsive-img">
+            </div>
+        </section>
+
+        <section>
+            <h2>Exemplu 2: Yogur Griegu</h2>
+            <p>Hai 2 formatos de yogur griegu:</p>
+            <ul>
+                <li>Formatu de 6 envases de 125 gramos (total <strong>1,55 €</strong>).</li>
+                <li>Formatu de 1 kg (total <strong>2,30 €</strong>).</li>
+            </ul>
+            <p>Ye un error comparar los precios direutamente, yá que tienen pesu total diferente.</p>
+            <div class="image-container">
+                <img src="ayuda_es_griego.png" alt="Comparanza de yogur griegu" class="responsive-img">
+            </div>
+
+            <p>L'aplicación amuesa un resume ordenáu de meyor a peor preciu:</p>
+            <ul>
+                <li><strong>El griegu 6</strong> (el pack de los 6 yogures): el kg sal a <strong>2,067 €/kg</strong>. Per un euru obtienes 0,484 kg de productu.</li>
+                <li><strong>El griegu 1</strong> (l'envase de 1 kg): el kg cuesta <strong>2,3 €/kg</strong>. Per un euru obtienes 0,435 kg de productu.</li>
+            </ul>
+            
+            <p>Al rexistrar un productu, en <strong>“Unidá”</strong> escueyes el tipu de midida (Peso, Volume, Llonxitú, Piezes) y depués la unidá concreta (gramos, quilogramos, etc.). La unidá de midida pal resultáu final (nesti casu, kg) tien que ser la mesma pa tolos productos pa que la comparanza tenga sentíu.</p>
+            
+            <div class="image-container">
+                <img src="ayuda_es_griegoAPP.png" alt="Resultaos de l'APP Yogur Griegu" class="responsive-img">
+            </div>
+        </section>
+
+        <section>
+            <h2>Exemplu 3: Botella d'Agua</h2>
+            <p>Comparamos 3 formatos de botelles d'agua: <strong>33 cl</strong>, <strong>50 cl</strong> y <strong>1 llitru</strong>.</p>
+            <div class="image-container">
+                <img src="ayuda_es_agua.png" alt="Formatos de botella d'agua" class="responsive-img">
+            </div>
+
+            <p>Mete los datos y yá sabrás qué envase te cuesta menos.</p>
+            <p>Al meter los datos, usóse <strong>“cl”</strong> (centillitros) en dos casos y <strong>“l”</strong> (llitru) nel otru. El resultáu final unifícase a la unidá de midida qu'escueyas (nesti exemplu, llitros).</p>
+            
+            <div class="image-container">
+                <img src="ayuda_es_aguaAPP.png" alt="Resultaos de l'APP Agua" class="responsive-img">
+            </div>
+            
+            <p>Resulta que la botella de 33 cl, rexistrada como <strong>“item 33”</strong>, ye la más barata.</p>
+            <p>Como puedes ver, gracies a esta APP vas poder escoyer el productu más económicu.</p>
+        </section>
+    </main>
+    
+    <footer>
+        <p>2025 Asturies, España (<a href="https://github.com/informiguel/ComparaPrecios">informiguel</a>)</p>
+    </footer>
+
+</body>
+</html>

@@ -94,7 +94,7 @@ En la ventana de **Ajustes** puedes personalizar la app:
 - Recordar los datos al cerrar la app.
 
 <p align="center">
-    <img src="published_graphics/ayuda_es_ajustes.jpg" width="260" alt="Pantalla de Ajustes">
+    <img src="published_graphics/ayuda_es_ajustes.png" width="260" alt="Pantalla de Ajustes">
 </p>
 
 ---

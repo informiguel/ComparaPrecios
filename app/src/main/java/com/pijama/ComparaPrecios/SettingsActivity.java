@@ -142,6 +142,9 @@ public class SettingsActivity extends AppCompatActivity {
             case "nl":
                 url = baseUrl + "nl.html";
                 break;
+            case "ast":
+                url = baseUrl + "ast.html";
+                break;
             default:
                 url = baseUrl + "es.html";
                 break;

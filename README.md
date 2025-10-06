@@ -64,8 +64,8 @@ Imagina que en el supermercado ves el Kéfir con una oferta de **3 unidades por 
 ¿Merece la pena la oferta?
 
 <p align="center">
-    <img src="leona.png" width="180" alt="Logo Compara Precios"><br>
-    <img src="ayuda_es_kefir.png" width="300" alt="Ejemplo Kéfir">
+    <img src="published_graphics/leona.png" width="180" alt="Logo Compara Precios"><br>
+    <img src="published_graphics/ayuda_es_kefir.png" width="300" alt="Ejemplo Kéfir">
 </p>
 
 Ahí es donde la app **Compara Precios** te ayuda:
@@ -77,7 +77,7 @@ Ahí es donde la app **Compara Precios** te ayuda:
 En la sección **“Artículos ordenados”** verás los resultados del más barato al más caro.
 
 <p align="center">
-    <img src="ayuda_es_kefirAPP.gif" width="250" alt="Ejemplo en la app">
+    <img src="published_graphics/ayuda_es_kefirAPP.gif" width="250" alt="Ejemplo en la app">
 </p>
 
 💡 *Consejo:* usa el botón **Limpiar** para empezar de nuevo o la **papelera** para borrar un solo producto.
@@ -94,7 +94,7 @@ En la ventana de **Ajustes** puedes personalizar la app:
 - Recordar los datos al cerrar la app.
 
 <p align="center">
-    <img src="ayuda_es_ajustes.jpg" width="260" alt="Pantalla de Ajustes">
+    <img src="published_graphics/ayuda_es_ajustes.jpg" width="260" alt="Pantalla de Ajustes">
 </p>
 
 ---
@@ -105,8 +105,8 @@ En la ventana de **Ajustes** puedes personalizar la app:
 - **Formato 2:** 1 kg → **2,30 €**
 
 <p align="center">
-    <img src="ayuda_es_griego.png" width="300" alt="Comparativa yogur griego"><br>
-    <img src="ayuda_es_griegoAPP.png" width="250" alt="Resultados comparativa yogur griego">
+    <img src="published_graphics/ayuda_es_griego.png" width="300" alt="Comparativa yogur griego"><br>
+    <img src="published_graphics/ayuda_es_griegoAPP.png" width="250" alt="Resultados comparativa yogur griego">
 </p>
 
 La app muestra que el formato de **6 envases** es más económico (**2,07 €/kg**) frente al envase de **1 kg** (**2,30 €/kg**).
@@ -118,8 +118,8 @@ La app muestra que el formato de **6 envases** es más económico (**2,07 €/kg
 Compara distintos formatos (**33 cl**, **50 cl** y **1 l**) para ver cuál es más rentable.
 
 <p align="center">
-    <img src="ayuda_es_agua.png" width="300" alt="Ejemplo botellas de agua"><br>
-    <img src="ayuda_es_aguaAPP.png" width="280" alt="Resultado comparación agua">
+    <img src="published_graphics/ayuda_es_agua.png" width="300" alt="Ejemplo botellas de agua"><br>
+    <img src="published_graphics/ayuda_es_aguaAPP.png" width="280" alt="Resultado comparación agua">
 </p>
 
 Introduce los datos en la app: la unidad de medida puede ser **cl** o **l**, pero la comparación final se unifica automáticamente.
@@ -130,7 +130,6 @@ En este caso, la **botella de 33 cl** resulta ser la más económica.
 ## 📲 Información
 
 © 2025 Asturias, España
-Desarrollado por [**informiguel**](https://github.com/informiguel/ComparaPrecios)
 
 ---
 

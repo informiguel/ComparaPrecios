@@ -12,14 +12,19 @@
 
 
 ## Introducción
-El origen de esta APP es un trabajo realizado por: [Brent Vollebregt](https://nitratine.net/). Si quieres acceder a su código: https://github.com/brentvollebregt/price-per-unit
+El origen de esta APP es un trabajo (Price-per-unit) realizado por: [Brent Vollebregt](https://nitratine.net/). Si quieres acceder a su código: https://github.com/brentvollebregt/price-per-unit
 
 Aprovecho para dar gracias a Brent Vollebregt por su trabajo e invito a todos a ver su página web donde tiene cosas muy interesantes. Gracias.
 
 Mi intención era adaptar la APP "price-per-unit" a mi gusto y necesidades.
 El resultado es lo que ves, la APP "Compara precios".
-El cambio verdaderamente importante es que ahora se muestra el precio por unidad de medida, por ejemplo 12€/kg.
-El resto son pequeñas modificaciones.
+El cambio verdaderamente importante es que ahora se muestra el precio por unidad de medida (por ejemplo 12€/kg) junto con la cantidad obtenida por unidad monetaria (por ejemplo 34kg/€). Esto último era lo que realizaba la app original.
+El resto son pequeñas modificaciones, como:
+* Un botón de ayuda para aprender a manejar el programa.
+* Se añadió la unidad de medida "cl" (centilitros).
+* Algunos pequeños cambios en la GUI, en el redondeo por defecto (3) y la moneda por defecto (€).
+*
+
 
 ## Capturas de pantalla
 
@@ -127,7 +132,16 @@ En este caso, la **botella de 33 cl** resulta ser la más económica.
 
 ---
 
-## 📲 Información
+## 📄 Licencia y atribución
+
+Este proyecto es un fork de **Price-to-unit original** (https://github.com/brentvollebregt/price-per-unit),
+publicado originalmente bajo licencia **Apache 2.0** por **Brent Vollebregt**.
+
+Las modificaciones, adaptaciones y mejoras realizadas en esta versión son © 2025 **Miguel Suárez**
+y se distribuyen bajo la misma licencia **Apache License 2.0**.
+
+Consulta el archivo LICENSE para más detalles.
+
 
 © 2025 Asturias, España
 

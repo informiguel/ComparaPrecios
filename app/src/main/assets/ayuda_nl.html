@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Help | Vergelijk Prijzen</title>
+
+    <style>
+        :root {
+            --color-text: #2c3e50;
+            --color-background: #ffffff;
+            --color-card-bg: #f5f8fa;
+            --color-shadow: rgba(0, 0, 0, 0.1);
+            --color-heading: #34495e;
+            --color-border: #ecf0f1;
+            --color-link: #3498db;
+        }
+
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --color-text: #ecf0f1;
+                --color-background: #202b38;
+                --color-card-bg: #2c3e50;
+                --color-shadow: rgba(255, 255, 255, 0.1);
+                --color-heading: #ecf0f1;
+                --color-border: #3d5162;
+                --color-link: #5dade2;
+            }
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 16px;
+            background-color: var(--color-background);
+            color: var(--color-text);
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        header h1 {
+            color: var(--color-heading);
+            border-bottom: 2px solid var(--color-border);
+            padding-bottom: 10px;
+            font-size: 1.8em;
+        }
+
+        h2 {
+            color: var(--color-heading);
+            margin-top: 25px;
+            margin-bottom: 10px;
+            font-size: 1.4em;
+        }
+
+        ul, ol {
+            padding-left: 20px;
+            margin-bottom: 15px;
+        }
+
+        li {
+            margin-bottom: 8px;
+        }
+
+        a {
+            color: var(--color-link);
+        }
+
+        .image-container {
+            display: block;
+            margin: 20px 0;
+            padding: 10px;
+            background-color: var(--color-card-bg);
+            border-radius: 8px;
+            box-shadow: 0 4px 8px var(--color-shadow);
+            overflow: hidden;
+        }
+
+        .responsive-img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 0 auto;
+            border-radius: 4px;
+        }
+
+        footer {
+            margin-top: 40px;
+            padding-top: 15px;
+            border-top: 1px solid var(--color-border);
+            font-size: 0.85em;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Help: Vergelijk Prijzen</h1>
+</header>
+
+<main>
+    <section>
+        <h2>Hoe de app werkt</h2>
+        <p><strong>Vergelijk Prijzen</strong> is de app die je helpt om het <strong>goedkoopste</strong> product te kiezen tussen producten met vergelijkbare kenmerken die in verschillende hoeveelheden worden verkocht.</p>
+        <p>Maak nooit meer een fout bij het kiezen tussen producten van gelijke kwaliteit maar met verschillende gewichten of volumes.</p>
+
+        <div class="image-container">
+            <img src="leona.png" alt="App-pictogram" class="responsive-img">
+        </div>
+
+        <p>Laten we nu een voorbeeld bekijken van hoe je de app kunt gebruiken.</p>
+    </section>
+
+    <section>
+        <h2>Voorbeeld 1: Kefir-aanbieding</h2>
+        <p>Stel dat je kefir ziet met een aanbieding van 3 stuks voor <strong>€4,50</strong>, terwijl één enkele verpakking <strong>€1,68</strong> kost. Is de aanbieding de moeite waard?</p>
+
+        <div class="image-container">
+            <img src="ayuda_es_kefir.png" alt="Kefir-aanbieding in de supermarkt" class="responsive-img">
+        </div>
+
+        <p>De <em>app</em> “Vergelijk Prijzen” helpt je met een eenvoudige vergelijking:</p>
+
+        <ol>
+            <li>Klik op de knop <strong>“Artikel toevoegen”</strong>.</li>
+            <li>Vul voor elk product de volgende gegevens in:
+                <ul>
+                    <li>De <strong>naam</strong> van het product (optioneel).</li>
+                    <li>De <strong>prijs</strong> van het product.</li>
+                    <li>De <strong>hoeveelheid</strong> (gewicht, volume, lengte, enz.).</li>
+                    <li>Het <strong>aantal eenheden</strong> in de verpakking of aanbieding (standaard 1).</li>
+                </ul>
+            </li>
+        </ol>
+
+        <p>Om meer producten toe te voegen, klik opnieuw op <strong>“Artikel toevoegen”</strong> en vul hun gegevens in.</p>
+
+        <h3>Vergelijkingsresultaat</h3>
+        <div class="image-container">
+            <img src="ayuda_es_kefirAPP.gif" alt="Kefir-resultaten in de app" class="responsive-img">
+        </div>
+
+        <p>In het gedeelte <strong>“Gesorteerde artikelen”</strong> verschijnen de resultaten van <strong>goedkoopste naar duurste</strong>.</p>
+        <p>De lijst toont:</p>
+        <ol>
+            <li>Naam van het product.</li>
+            <li>Prijs per kg product.</li>
+            <li>Hoeveelheid product per euro.</li>
+        </ol>
+
+        <p>Het <strong>“Item2”</strong> (standaardnaam) is het goedkoopste. Het komt overeen met de aanbieding van 3 verpakkingen van 400 g (€3,75/kg), goedkoper dan één enkele verpakking van €1,68 (€4,2/kg).</p>
+    </section>
+
+    <section>
+        <h2>Opties en instellingen</h2>
+        <p>Wil je opnieuw beginnen? Klik op <strong>“Wissen”</strong> om alle producten te verwijderen.</p>
+        <p>Om slechts één product te verwijderen, klik je op het <strong>prullenbak-icoon</strong> ernaast. De pijltjes veranderen de volgorde, maar niet de resultaten.</p>
+
+        <p>Standaard werkt de app met <strong>3 decimalen</strong> en de valuta <strong>euro (€)</strong>. Om de instellingen aan te passen, klik je op <strong>“Instellingen”</strong>:</p>
+        <ul>
+            <li>Wijzig het valutasymbool (€ standaard).</li>
+            <li>Kies het aantal decimalen in <strong>“Afronding”</strong>.</li>
+            <li>Schakel automatische sortering van resultaten in of uit.</li>
+            <li>Bepaal of de app de gegevens moet <strong>onthouden</strong> bij het sluiten.</li>
+        </ul>
+
+        <p>In het instellingenvenster zie je ook de appversie, foutrapportage, help, ontwikkelaarswebsite en licentie.</p>
+
+        <div class="image-container">
+            <img src="ayuda_es_ajustes.png" alt="Instellingen-scherm van de app" class="responsive-img">
+        </div>
+    </section>
+
+    <section>
+        <h2>Voorbeeld 2: Griekse yoghurt</h2>
+        <p>Er zijn twee formaten Griekse yoghurt:</p>
+        <ul>
+            <li>Verpakking met 6 bekers van 125 gram (totaal <strong>€1,55</strong>).</li>
+            <li>Pot van 1 kg (totaal <strong>€2,30</strong>).</li>
+        </ul>
+        <p>Het is een fout om hun prijzen rechtstreeks te vergelijken, want de totale gewichten verschillen.</p>
+
+        <div class="image-container">
+            <img src="ayuda_es_griego.png" alt="Vergelijking Griekse yoghurt" class="responsive-img">
+        </div>
+
+        <p>De <em>app</em> toont de resultaten gesorteerd van goedkoop naar duur:</p>
+        <ul>
+            <li><strong>Grieks 6</strong> (6 bekers): €2,067/kg, dus 0,484 kg per euro.</li>
+            <li><strong>Grieks 1</strong> (1 kg pot): €2,3/kg, dus 0,435 kg per euro.</li>
+        </ul>
+
+        <p>Bij het invoeren van een product kies je in <strong>“Eenheid”</strong> het type meting (gewicht, volume, lengte, stuks) en daarna de specifieke eenheid (g, kg, ml, enz.). De eenheid moet voor alle producten gelijk zijn.</p>
+
+        <div class="image-container">
+            <img src="ayuda_es_griegoAPP.png" alt="Griekse yoghurt resultaten in de app" class="responsive-img">
+        </div>
+    </section>
+
+    <section>
+        <h2>Voorbeeld 3: Waterfles</h2>
+        <p>Vergelijk drie formaten waterflessen: <strong>33 cl</strong>, <strong>50 cl</strong> en <strong>1 liter</strong>.</p>
+
+        <div class="image-container">
+            <img src="ayuda_es_agua.png" alt="Waterflessen formaten" class="responsive-img">
+        </div>
+
+        <p>Voer de gegevens in om te zien welke verpakking het goedkoopst is.</p>
+        <p>In dit voorbeeld zijn twee producten ingevoerd in <strong>cl</strong> en één in <strong>l</strong>. Het resultaat wordt automatisch omgerekend naar dezelfde eenheid (bijv. liters).</p>
+
+        <div class="image-container">
+            <img src="ayuda_es_aguaAPP.png" alt="Resultaten watervergelijking" class="responsive-img">
+        </div>
+
+        <p>Het item <strong>33</strong> blijkt de goedkoopste te zijn.</p>
+        <p>Dankzij deze app kun je altijd het voordeligste product kiezen!</p>
+    </section>
+</main>
+
+<footer>
+    <p>2025 Asturië, Spanje (<a href="https://github.com/informiguel/ComparaPrecios">informiguel</a>)</p>
+</footer>
+
+</body>
+</html>

@@ -1,4 +1,4 @@
-package com.pijama.ComparaPrecios;
+package com.github.informiguel.ComparaPrecios;
 
 import android.app.Activity;
 import android.content.SharedPreferences;

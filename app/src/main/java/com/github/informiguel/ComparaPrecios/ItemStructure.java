@@ -1,4 +1,4 @@
-package com.pijama.ComparaPrecios;
+package com.github.informiguel.ComparaPrecios;
 
 public class ItemStructure {
     public String name;

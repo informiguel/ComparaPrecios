@@ -51,14 +51,16 @@
     <li>
             <b>Aplicación </b>
             <br/>
-             Este producto es una adaptación de la app Price-per-unit
+             <pre>
+             Este producto es una adaptación de la app Price-per-unit.
              Desarrollado originalmente por:
                   https://nitratine.net/
                   https://github.com/brentvollebregt/price-per-unit
               Y modificado por:
                   https://informiguel.blogspot.com/
                   https://github.com/informiguel/ComparaPrecios
-        </li>
+             </pre>
+    </li>
         <li>
             <b>material-design-icons</b>
             <br/>

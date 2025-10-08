@@ -1,4 +1,4 @@
-package com.pijama.ComparaPrecios;
+package com.github.informiguel.ComparaPrecios;
 
 import android.app.AlertDialog;
 import android.content.Intent;
@@ -13,7 +13,6 @@ import android.webkit.WebView;
 import android.webkit.WebViewClient;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
-import android.widget.CompoundButton;
 import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.Switch;

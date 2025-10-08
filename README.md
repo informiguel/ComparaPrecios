@@ -23,7 +23,7 @@ El resto son pequeñas modificaciones, como:
 * Un botón de ayuda para aprender a manejar el programa.
 * Se añadió la unidad de medida "cl" (centilitros).
 * Algunos pequeños cambios en la GUI, en el redondeo por defecto (3) y la moneda por defecto (€).
-*
+
 
 
 ## Capturas de pantalla
@@ -134,13 +134,13 @@ En este caso, la **botella de 33 cl** resulta ser la más económica.
 
 ## 📄 Licencia y atribución
 
-Este proyecto es un fork de **Price-to-unit original** (https://github.com/brentvollebregt/price-per-unit),
+Este proyecto es una modificación de la APP **Price-to-unit original** (https://github.com/brentvollebregt/price-per-unit),
 publicado originalmente bajo licencia **Apache 2.0** por **Brent Vollebregt**.
 
 Las modificaciones, adaptaciones y mejoras realizadas en esta versión son © 2025 **Miguel Suárez**
 y se distribuyen bajo la misma licencia **Apache License 2.0**.
 
-Consulta el archivo LICENSE para más detalles.
+Consulta el archivo LICENSE  y NOTICE para más detalles.
 
 
 © 2025 Asturias, España

@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ajuda | Compara Preços</title>
+    
+    <style>
+        :root {
+            --color-text: #2c3e50;
+            --color-background: #ffffff;
+            --color-card-bg: #f5f8fa;
+            --color-shadow: rgba(0, 0, 0, 0.1);
+            --color-heading: #34495e;
+            --color-border: #ecf0f1;
+            --color-link: #3498db;
+        }
+
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --color-text: #ecf0f1;
+                --color-background: #202b38;
+                --color-card-bg: #2c3e50;
+                --color-shadow: rgba(255, 255, 255, 0.1);
+                --color-heading: #ecf0f1;
+                --color-border: #3d5162;
+                --color-link: #5dade2;
+            }
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 16px;
+            background-color: var(--color-background);
+            color: var(--color-text);
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        header h1 {
+            color: var(--color-heading);
+            border-bottom: 2px solid var(--color-border);
+            padding-bottom: 10px;
+            font-size: 1.8em;
+        }
+
+        h2 {
+            color: var(--color-heading);
+            margin-top: 25px;
+            margin-bottom: 10px;
+            font-size: 1.4em;
+        }
+
+        ul, ol {
+            padding-left: 20px;
+            margin-bottom: 15px;
+        }
+
+        li {
+            margin-bottom: 8px;
+        }
+
+        a {
+            color: var(--color-link);
+        }
+
+        .image-container {
+            display: block;
+            margin: 20px 0;
+            padding: 10px;
+            background-color: var(--color-card-bg);
+            border-radius: 8px;
+            box-shadow: 0 4px 8px var(--color-shadow);
+            overflow: hidden;
+        }
+
+        .responsive-img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 0 auto;
+            border-radius: 4px;
+        }
+
+        footer {
+            margin-top: 40px;
+            padding-top: 15px;
+            border-top: 1px solid var(--color-border);
+            font-size: 0.85em;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Ajuda: Compara Preços</h1>
+</header>
+
+<main>
+    <section>
+        <h2>Funcionamento da App</h2>
+        <p><strong>Compara Preços</strong> é a <em>app</em> que te ajudará a escolher o produto mais <strong>barato</strong> em relação a outros produtos de características idênticas que são vendidos em diferentes quantidades.</p>
+        <p>Não voltes a errar ao escolher entre vários produtos de qualidade semelhante, mas com quantidades diferentes.</p>
+
+        <div class="image-container">
+            <img src="leona.png" alt="Ícone da aplicação" class="responsive-img">
+        </div>
+
+        <p>A seguir, veremos um exemplo de como utilizar a app.</p>
+    </section>
+
+    <section>
+        <h2>Exemplo 1: Oferta de Kéfir</h2>
+        <p>Imagina que vês o Kéfir com uma oferta de 3 unidades por <strong>4,50 €</strong>, enquanto uma única unidade é vendida por <strong>1,68 €</strong>. Vale a pena a oferta?</p>
+
+        <div class="image-container">
+            <img src="ayuda_es_kefir.png" alt="Oferta de Kéfir no supermercado" class="responsive-img">
+        </div>
+
+        <p>A <em>app</em> “Compara Preços” vai ajudar-te. Os passos são simples:</p>
+
+        <ol>
+            <li>Clica no botão <strong>“Adicionar artigos”</strong>.</li>
+            <li>Preenche os seguintes dados por produto:
+                <ul>
+                    <li>O <strong>nome do produto</strong> (opcional).</li>
+                    <li>O <strong>preço</strong> do produto.</li>
+                    <li>A <strong>quantidade</strong> de produto que contém.</li>
+                    <li>O <strong>número de unidades</strong> que vêm no pacote ou promoção (por defeito é 1).</li>
+                </ul>
+            </li>
+        </ol>
+
+        <p>Para adicionar mais produtos à comparação, clica novamente em <strong>“Adicionar artigo”</strong> e insere os dados.</p>
+
+        <h3>Resultado da comparação</h3>
+        <div class="image-container">
+            <img src="ayuda_es_kefirAPP.gif" alt="Resultados da comparação de Kéfir na app" class="responsive-img">
+        </div>
+
+        <p>Na secção <strong>“Artigos ordenados”</strong> aparecem os resultados ordenados do <strong>mais económico ao menos</strong>.</p>
+        <p>A informação mostrada na lista é:</p>
+        <ol>
+            <li>Nome do produto.</li>
+            <li>Relação € de custo por kg de produto.</li>
+            <li>Relação quantidade em kg por cada euro de custo.</li>
+        </ol>
+        <p>O <strong>“Item2”</strong> (nome por defeito) é o primeiro e, portanto, o mais barato. Corresponde à oferta de 3 embalagens de 400 g (3,75 €/kg). Fica mais barato do que comprar uma só por 1,68 € (4,2 €/kg). Observa que a unidade escolhida para o resultado final é o kg, mas poderias ter escolhido gramas (g).</p>
+    </section>
+
+    <section>
+        <h2>Opções e Definições</h2>
+        <p>Se quiseres começar de novo, clica no botão <strong>“Limpar”</strong> para apagar todos os produtos.</p>
+        <p>Para apagar apenas um produto, clica no ícone da <strong>lixeira</strong> ao lado dele. As setas servem para mudar a ordem dos produtos no ecrã, mas isso não altera os resultados.</p>
+
+        <p>Por defeito, o programa trabalha com <strong>3 decimais</strong> e com <strong>euros (€)</strong>. Para ajustar a app ao teu gosto, clica no botão <strong>“Definições”</strong>:</p>
+        <ul>
+            <li>Mudar o símbolo da moeda (€ por defeito).</li>
+            <li>Escolher a precisão dos decimais em <strong>“Arredondamento”</strong>.</li>
+            <li>Ativar ou desativar a ordenação automática dos resultados.</li>
+            <li>Escolher se a app deve <strong>memorizar</strong> os dados mesmo ao fechar.</li>
+        </ul>
+        <p>Além disso, na janela de definições encontras a versão da app, onde reportar erros, a ajuda, o site do desenvolvedor e a licença.</p>
+
+        <div class="image-container">
+            <img src="ayuda_es_ajustes.png" alt="Ecrã de Definições da app" class="responsive-img">
+        </div>
+    </section>
+
+    <section>
+        <h2>Exemplo 2: Iogurte Grego</h2>
+        <p>Existem 2 formatos de iogurte grego:</p>
+        <ul>
+            <li>Pacote com 6 embalagens de 125 gramas (total <strong>1,55 €</strong>).</li>
+            <li>Formato de 1 kg (total <strong>2,30 €</strong>).</li>
+        </ul>
+        <p>É um erro comparar os preços diretamente, pois têm pesos totais diferentes.</p>
+
+        <div class="image-container">
+            <img src="ayuda_es_griego.png" alt="Comparação de iogurte grego" class="responsive-img">
+        </div>
+
+        <p>A <em>app</em> mostra um resumo ordenado do melhor ao pior preço:</p>
+        <ul>
+            <li><strong>Grego 6</strong> (pacote com 6 iogurtes): o kg sai a <strong>2,067 €/kg</strong>. Por um euro obténs 0,484 kg de produto.</li>
+            <li><strong>Grego 1</strong> (embalagem de 1 kg): o kg custa <strong>2,3 €/kg</strong>. Por um euro obténs 0,435 kg de produto.</li>
+        </ul>
+
+        <p>Ao introduzir um produto, em <strong>“Unidade”</strong> escolhes o tipo de medida (Peso, Volume, Comprimento, Peças) e depois a unidade concreta (gramas, quilogramas, etc.). A unidade de medida do resultado final (neste caso, kg) deve ser igual para todos os produtos para que a comparação faça sentido.</p>
+
+        <div class="image-container">
+            <img src="ayuda_es_griegoAPP.png" alt="Resultados do iogurte grego na app" class="responsive-img">
+        </div>
+    </section>
+
+    <section>
+        <h2>Exemplo 3: Garrafa de Água</h2>
+        <p>Comparamos 3 formatos de garrafas de água: <strong>33 cl</strong>, <strong>50 cl</strong> e <strong>1 litro</strong>.</p>
+
+        <div class="image-container">
+            <img src="ayuda_es_agua.png" alt="Formatos de garrafas de água" class="responsive-img">
+        </div>
+
+        <p>Introduz os dados e saberás qual embalagem custa menos.</p>
+        <p>Ao introduzir os dados, foi usada a unidade <strong>“cl”</strong> (centilitros) em dois casos e <strong>“l”</strong> (litro) no outro. O resultado final é unificado para a unidade de medida que escolheres (neste exemplo, litros).</p>
+
+        <div class="image-container">
+            <img src="ayuda_es_aguaAPP.png" alt="Resultados da água na app" class="responsive-img">
+        </div>
+
+        <p>Verifica-se que a garrafa de 33 cl, introduzida como <strong>“item 33”</strong>, é a mais barata.</p>
+        <p>Como podes ver, graças a esta app poderás escolher sempre o produto mais económico.</p>
+    </section>
+</main>
+
+<footer>
+    <p>2025 Astúrias, Espanha (<a href="https://github.com/informiguel/ComparaPrecios">informiguel</a>)</p>
+</footer>
+
+</body>
+</html>

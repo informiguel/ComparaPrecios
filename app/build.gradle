@@ -4,17 +4,17 @@ def keystorePropertiesFile = rootProject.file("keystore.properties")
 def keystoreProperties = new Properties()
 
 android {
-	namespace 'com.pijama.ComparaPrecios'
-    compileSdkVersion 36
-    buildToolsVersion "36.1.0"
+	namespace = 'com.github.informiguel.ComparaPrecios'
+    compileSdkVersion = 36
+    buildToolsVersion = "36.1.0"
     defaultConfig {
-        applicationId "com.pijama.ComparaPrecios"
-        minSdk 33
+        applicationId = "com.github.informiguel.ComparaPrecios"
+        minSdk = 33
         //noinspection OldTargetApi
-        targetSdk 33
-        versionCode 1
-        versionName "1.0.0"
-        testInstrumentationRunner 'androidx.test.runner.AndroidJUnitRunner'
+        targetSdk = 34
+        versionCode = 1
+        versionName = "1.0.0"
+        testInstrumentationRunner = 'androidx.test.runner.AndroidJUnitRunner'
         vectorDrawables.useSupportLibrary = true
         buildFeatures {
             buildConfig = true
@@ -24,10 +24,10 @@ android {
         release {
             if (keystorePropertiesFile.exists()) {
                 keystoreProperties.load(new FileInputStream(keystorePropertiesFile))
-                keyAlias keystoreProperties['keyAlias']
-                keyPassword keystoreProperties['keyPassword']
-                storeFile file(keystoreProperties['storeFile'])
-                storePassword keystoreProperties['storePassword']
+                keyAlias = keystoreProperties['keyAlias']
+                keyPassword = keystoreProperties['keyPassword']
+                storeFile = file(keystoreProperties['storeFile'])
+                storePassword = keystoreProperties['storePassword']
                 print("Loaded keystore.properties file found.")
             } else {
                 print("No keystore.properties file found.")
@@ -47,10 +47,13 @@ android {
         }
     }
     compileOptions {
-        sourceCompatibility JavaVersion.VERSION_1_8
-        targetCompatibility JavaVersion.VERSION_1_8
+        sourceCompatibility JavaVersion.VERSION_21
+        targetCompatibility JavaVersion.VERSION_21
+
     }
+
 }
+
 
 dependencies {
     // Añade el Kotlin BOM para gestionar las versiones de las bibliotecas de Kotlin

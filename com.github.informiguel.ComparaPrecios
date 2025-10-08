@@ -1,0 +1,12 @@
+SourceCode: https://github.com/informiguel/ComparaPrecios
+
+License: Apache-2.0.
+
+Changelog: v1.0
+Al mostrar los productos ordenados por mejor precio ahora aparece con doble información: el precio por unidad de medida (por ejemplo 12€/kg) y la cantidad obtenida por unidad monetaria (por ejemplo 34kg/€). Esto último era lo que realizaba la app original price-per-unit.
+El resto son pequeñas modificaciones, como:
+* Un botón de ayuda para aprender a manejar el programa en varios idiomas.
+* Se añadió la unidad de medida de volumen "cl" (centilitros).
+* Algunos pequeños cambios en la GUI, en el redondeo por defecto (3) y la moneda por defecto (€).
+
+Builds: 

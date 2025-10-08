@@ -1,4 +1,4 @@
-package com.pijama.ComparaPrecios;
+package com.github.informiguel.ComparaPrecios;
 
 import android.annotation.SuppressLint;
 import android.content.ContentValues;

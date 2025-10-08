@@ -23,6 +23,6 @@ public class ExampleInstrumentedTest {
         // Context of the app under test.
         Context appContext = InstrumentationRegistry.getInstrumentation().getTargetContext();
 
-        assertEquals("com.pijama.ComparaPrecios", appContext.getPackageName());
+        assertEquals("com.pijama.com.github.informiguel.ComparaPrecios", appContext.getPackageName());
     }
 }

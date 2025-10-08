@@ -6,20 +6,21 @@
 </div>
 
 
-<p align="center">
-    <a href="https://f-droid.org/en/packages/net.nitratine.priceperunit/"><img src="https://nitratine.net/posts/price-per-unit/get-it-on-f-droid.png" alt="Get it on F-Droid" height="100"></a>
-</p>
-
 
 ## Introducción
-El origen de esta APP es un trabajo realizado por: [Brent Vollebregt](https://nitratine.net/). Si quieres acceder a su código: https://github.com/brentvollebregt/price-per-unit
+El origen de esta APP es un trabajo (Price-per-unit) realizado por: [Brent Vollebregt](https://nitratine.net/). Si quieres acceder a su código: https://github.com/brentvollebregt/price-per-unit
 
 Aprovecho para dar gracias a Brent Vollebregt por su trabajo e invito a todos a ver su página web donde tiene cosas muy interesantes. Gracias.
 
 Mi intención era adaptar la APP "price-per-unit" a mi gusto y necesidades.
 El resultado es lo que ves, la APP "Compara precios".
-El cambio verdaderamente importante es que ahora se muestra el precio por unidad de medida, por ejemplo 12€/kg.
-El resto son pequeñas modificaciones.
+El cambio verdaderamente importante es que ahora se muestra el precio por unidad de medida (por ejemplo 12€/kg) junto con la cantidad obtenida por unidad monetaria (por ejemplo 34kg/€). Esto último era lo que realizaba la app original.
+El resto son pequeñas modificaciones, como:
+* Un botón de ayuda para aprender a manejar el programa.
+* Se añadió la unidad de medida "cl" (centilitros).
+* Algunos pequeños cambios en la GUI, en el redondeo por defecto (3) y la moneda por defecto (€).
+
+
 
 ## Capturas de pantalla
 
@@ -127,9 +128,37 @@ En este caso, la **botella de 33 cl** resulta ser la más económica.
 
 ---
 
-## 📲 Información
+## 📄 Licencia y atribución
+
+Este proyecto es una modificación de la APP **Price-to-unit original** (https://github.com/brentvollebregt/price-per-unit),
+publicado originalmente bajo licencia **Apache 2.0** por **Brent Vollebregt**.
+
+Las modificaciones, adaptaciones y mejoras realizadas en esta versión son © 2025 **Miguel Suárez**
+y se distribuyen bajo la misma licencia **Apache License 2.0**.
+
+Consulta el archivo LICENSE  y NOTICE para más detalles.
+
 
 © 2025 Asturias, España
+
+## ⚙️ Desarrollo
+Android Studio Narwhal 3 Feature Drop | 2025.1.3\
+Build #AI-251.26094.121.2513.14007798, built on August 28, 2025\
+Runtime version: 21.0.7+-13880790-b1038.58 amd64\
+VM: OpenJDK 64-Bit Server VM by JetBrains s.r.o.\
+Toolkit: sun.awt.windows.WToolkit\
+Windows 10.0\
+Kotlin plugin: K2 mode\
+GC: G1 Young Generation, G1 Concurrent GC, G1 Old Generation\
+Memory: 2048M\
+Cores: 4\
+Registry:\
+ide.experimental.ui=true\
+
+Temurin® JDK:  https://adoptium.net/temurin/releases/ \
+JAVA_HOME C:\Program Files\Eclipse Adoptium\jdk-21.0.8.9-hotspot\
+Android Studio: Settings -> Build, Execution, Deployment -> Build Tools -> Gradle and set the Gradle JDK to JAVA_HOME\
+sourceCompatibility JavaVersion.VERSION_21
 
 ---
 

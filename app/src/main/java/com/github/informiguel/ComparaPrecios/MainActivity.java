@@ -1,7 +1,6 @@
-package com.pijama.ComparaPrecios;
+package com.github.informiguel.ComparaPrecios;
 
 import android.content.Intent;
-import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
@@ -13,6 +12,9 @@ import android.widget.ImageButton;
 import android.widget.LinearLayout;
 import android.widget.Spinner;
 import android.widget.TextView;
+import android.os.Build;
+import android.app.Activity;
+import androidx.appcompat.app.AppCompatActivity;
 
 import java.math.RoundingMode;
 import java.text.DecimalFormat;
@@ -150,7 +152,18 @@ public class MainActivity extends AppCompatActivity {
             dontSaveDataFlag = true;
             Intent intent = new Intent(this, MainActivity.class);
             finish();
-            overridePendingTransition(0, 0);
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.UPSIDE_DOWN_CAKE) { // API 34+
+                // Usa la API moderna (requiere un Bundle)
+                overrideActivityTransition(
+                        Activity.OVERRIDE_TRANSITION_CLOSE,
+                        0, // Animación de entrada
+                        0  // Animación de salida
+                );
+            } else {
+                // Usa la API obsoleta para dispositivos más antiguos
+                // noinspection deprecation
+                overridePendingTransition(0, 0);
+            }
             startActivity(intent);
             return;
         }

@@ -1,4 +1,4 @@
-package com.pijama.ComparaPrecios;
+package com.github.informiguel.ComparaPrecios;
 
 import android.content.Context;
 
@@ -20,8 +20,6 @@ public class UnidadesDeMedida {
         ArrayList<Double> units_weight_relativity = new ArrayList<>();
         units_weight.add("g");
         units_weight_relativity.add(1.0);
-        units_weight.add("kg");
-        units_weight_relativity.add(0.001);
         units_weight.add("kg");
         units_weight_relativity.add(0.001);
         units_weight.add("t"); // toneladas

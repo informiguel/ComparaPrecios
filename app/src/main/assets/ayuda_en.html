@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Help | Compare Prices</title>
+    
+    <style>
+        /* ===================================================
+           1. CSS VARIABLES (Adaptive Light/Dark Mode)
+           =================================================== */
+        :root {
+            /* Light Mode (Default values) */
+            --color-text: #2c3e50;
+            --color-background: #ffffff;
+            --color-card-bg: #f5f8fa;
+            --color-shadow: rgba(0, 0, 0, 0.1);
+            --color-heading: #34495e;
+            --color-border: #ecf0f1;
+            --color-link: #3498db;
+        }
+
+        /* Dark Mode Support (Applies automatically with system preference) */
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --color-text: #ecf0f1;
+                --color-background: #202b38; /* Darker background than text */
+                --color-card-bg: #2c3e50;
+                --color-shadow: rgba(255, 255, 255, 0.1);
+                --color-heading: #ecf0f1;
+                --color-border: #3d5162;
+                --color-link: #5dade2;
+            }
+        }
+
+        /* ===================================================
+           2. BASIC STYLES & TYPOGRAPHY
+           =================================================== */
+        body {
+            font-family: 'Roboto', sans-serif; /* Legible font */
+            line-height: 1.6;
+            margin: 0;
+            padding: 16px; /* Space for the WebView */
+            background-color: var(--color-background);
+            color: var(--color-text);
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        header h1 {
+            color: var(--color-heading);
+            border-bottom: 2px solid var(--color-border);
+            padding-bottom: 10px;
+            font-size: 1.8em;
+        }
+
+        h2 {
+            color: var(--color-heading);
+            margin-top: 25px;
+            margin-bottom: 10px;
+            font-size: 1.4em;
+        }
+        
+        ul, ol {
+            padding-left: 20px;
+            margin-bottom: 15px;
+        }
+        
+        li {
+            margin-bottom: 8px;
+        }
+        
+        a {
+            color: var(--color-link);
+        }
+
+        /* ===================================================
+           3. STYLES FOR IMAGES & RESPONSIVE
+           =================================================== */
+        .image-container {
+            display: block;
+            margin: 20px 0;
+            padding: 10px;
+            background-color: var(--color-card-bg);
+            border-radius: 8px;
+            /* Soft shadow for a modern look */
+            box-shadow: 0 4px 8px var(--color-shadow); 
+            overflow: hidden; 
+        }
+
+        .responsive-img {
+            max-width: 100%; /* Fully responsive */
+            height: auto;
+            display: block;
+            margin: 0 auto;
+            border-radius: 4px;
+        }
+        
+        /* ===================================================
+           4. FOOTER
+           =================================================== */
+        footer {
+            margin-top: 40px;
+            padding-top: 15px;
+            border-top: 1px solid var(--color-border);
+            font-size: 0.85em;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Help: Compare Prices</h1>
+    </header>
+
+    <main>
+        <section>
+            <h2>How the App Works</h2>
+            <p><strong>Compare Prices</strong> is the app that will help you choose the most <strong>economical</strong> product in relation to other products with identical characteristics that are sold in different quantities.</p>
+            <p>Never make a mistake again when choosing between several products of similar quality but with different product quantities.</p>
+            
+            <div class="image-container">
+                <img src="leona.png" alt="Application Icon" class="responsive-img">
+            </div>
+            
+            <p>Below, we will see an example of how to use the app.</p>
+        </section>
+
+        <section>
+            <h2>Example 1: Kefir Offer</h2>
+            <p>Imagine you see Kefir with an offer of 3 units for <strong>€4.50</strong>, while a single unit is sold for <strong>€1.68</strong>. Is the offer worth it?</p>
+            
+            <div class="image-container">
+                <img src="ayuda_es_kefir.png" alt="Kefir Offer in the supermarket" class="responsive-img">
+            </div>
+
+            <p>The "Compare Prices" app will help you. The steps are simple:</p>
+            
+            <ol>
+                <li>Press the <strong>"Add items"</strong> button.</li>
+                <li>Fill in the following data per product:
+                    <ul>
+                        <li>The <strong>product name</strong> (optional).</li>
+                        <li>The <strong>price</strong> of the product.</li>
+                        <li>The <strong>quantity</strong> of product it contains.</li>
+                        <li>The <strong>number of units</strong> that come in the pack or offer (default is 1).</li>
+                    </ul>
+                </li>
+            </ol>
+
+            <p>To add more products to the comparison, press the <strong>"Add item"</strong> button and enter its data.</p>
+
+            <h3>Comparison Result</h3>
+            <div class="image-container">
+                <img src="ayuda_es_kefirAPP.gif" alt="Kefir Comparison Results in the APP" class="responsive-img">
+            </div>
+
+            <p>In the <strong>"Ordered Items"</strong> section, the results appear ordered from <strong>most economical to least</strong>.</p>
+            <p>The information shown in the list is:</p>
+            <ol>
+                <li>Product name.</li>
+                <li>Cost-to-Kg ratio of the product.</li>
+                <li>Quantity-in-Kg ratio per Euro of cost.</li>
+            </ol>
+            <p>The <strong>"Item2"</strong> (default name) is the first and, therefore, the cheapest. It corresponds to the offer of 3 containers of 400 g (€3.75/kg). It is cheaper than buying a single one for €1.68 (€4.2/kg). Note that the chosen unit of measure for the final result is kg, but you could have chosen grams (g).</p>
+        </section>
+        
+        <section>
+            <h2>Options and Settings</h2>
+            <p>If you want to start over, press the <strong>"Clear"</strong> button to delete all products.</p>
+            <p>To delete just one product, press the <strong>trash can</strong> icon next to the product. The arrows are used to change the order of the products on the screen, but this does not affect the results.</p>
+
+            <p>The program works by default with <strong>3 decimal places</strong> and with <strong>euros (€)</strong>. To adapt the APP to your liking, press the <strong>"Settings"</strong> button:</p>
+            <ul>
+                <li>Change the currency character type (default is €).</li>
+                <li>Choose the decimal precision in <strong>"Rounding"</strong>.</li>
+                <li>Activate or deactivate automatic sorting of results.</li>
+                <li>Choose whether the APP should <strong>remember</strong> the data even if it is closed.</li>
+            </ul>
+            <p>In addition, the settings window informs about the APP version, where to report errors, help, the developer's website, and the license.</p>
+            
+            <div class="image-container">
+                <img src="ayuda_es_ajustes.png" alt="APP Settings Screen" class="responsive-img">
+            </div>
+        </section>
+
+        <section>
+            <h2>Example 2: Greek Yogurt</h2>
+            <p>There are 2 formats of Greek yogurt:</p>
+            <ul>
+                <li>Format of 6 containers of 125 grams (total <strong>€1.55</strong>).</li>
+                <li>Format of 1 kg (total <strong>€2.30</strong>).</li>
+            </ul>
+            <p>It is a mistake to compare the prices directly, as they have different total weights.</p>
+            <div class="image-container">
+                <img src="ayuda_es_griego.png" alt="Greek Yogurt Comparison" class="responsive-img">
+            </div>
+
+            <p>The app shows a summary ordered from best to worst price:</p>
+            <ul>
+                <li><strong>The Greek 6</strong> (the pack of 6 yogurts): the kg costs <strong>€2.067/kg</strong>. For one euro you get 0.484 kg of product.</li>
+                <li><strong>The Greek 1</strong> (the 1 kg container): the kg costs <strong>€2.3/kg</strong>. For one euro you get 0.435 kg of product.</li>
+            </ul>
+            
+            <p>When entering a product, in <strong>"Unit"</strong> you choose the type of measurement (Weight, Volume, Length, Pieces) and then the specific unit (grams, kilograms, etc.). The unit of measure for the final result (in this case, kg) must be the same for all products for the comparison to make sense.</p>
+            
+            <div class="image-container">
+                <img src="ayuda_es_griegoAPP.png" alt="Greek Yogurt APP Results" class="responsive-img">
+            </div>
+        </section>
+
+        <section>
+            <h2>Example 3: Water Bottle</h2>
+            <p>We compare 3 formats of water bottles: <strong>33 cl</strong>, <strong>50 cl</strong>, and <strong>1 liter</strong>.</p>
+            <div class="image-container">
+                <img src="ayuda_es_agua.png" alt="Water Bottle Formats" class="responsive-img">
+            </div>
+
+            <p>Enter the data and you will know which container costs you less.</p>
+            <p>When entering the data, <strong>"cl"</strong> (centiliters) was used in two cases and <strong>"l"</strong> (liter) in the other. The final result is unified to the unit of measure you choose (in this example, liters).</p>
+            
+            <div class="image-container">
+                <img src="ayuda_es_aguaAPP.png" alt="Water APP Results" class="responsive-img">
+            </div>
+            
+            <p>It turns out that the 33 cl bottle, entered as <strong>"item 33"</strong>, is the cheapest.</p>
+            <p>As you can see, thanks to this APP you will be able to choose the most economical product.</p>
+        </section>
+    </main>
+    
+    <footer>
+        <p>2025 Asturias, Spain (<a href="https://github.com/informiguel/ComparaPrecios">informiguel</a>)</p>
+    </footer>
+
+</body>
+</html>

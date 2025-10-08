@@ -1,0 +1,28 @@
+<resources>
+    <string name="app_name">Compara precios</string>
+    <string name="unit_type">Unidá:</string>
+    <string name="weight">Pesu</string>
+    <string name="volume">Volumen</string>
+    <string name="length">Llonxitú</string>
+    <string name="pieces">Piezes</string>
+    <string name="clear">Llimpiar</string>
+    <string name="add_item">Amestar artículu</string>
+    <string name="item_name">Nome del artículu</string>
+    <string name="price">Preciu</string>
+    <string name="unidades">Unidaes</string>
+    <string name="cantidad">Cantidá</string>
+    <string name="items_ordered_by_best_ratio">Artículos ordenaos</string>
+    <string name="show_in">En: </string>
+    <string name="settings">Axustes</string>
+    <string name="settings_and_about">Axustes y Tocante a</string>
+    <string name="currency_symbol">Símbolu de Moneda</string>
+    <string name="rounding">Redondéu</string>
+    <string name="show_results_tile">Amosar resultaos</string>
+    <string name="remember_data">Recordar datos</string>
+    <string name="version">Versión %1$s</string>
+    <string name="rate_this_app">Valorar esta app</string>
+    <string name="bug_reporting">Informar problemes</string>
+    <string name="ayuda">Aida</string>
+    <string name="developers_site">Sitiu del desendolcador</string>
+    <string name="licenses">Llicencia</string>
+</resources>

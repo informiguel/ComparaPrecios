@@ -1,2 +1,0 @@
-* Fix decimals being turned into integers in calculations
-  

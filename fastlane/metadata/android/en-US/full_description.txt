@@ -2,7 +2,7 @@ Compare an unlimited number of products to find the best price. Save money smart
 
 We often come across products that are sold at different prices depending on the quantity, and it's difficult to know which one is cheaper.
 
-With the "Compare Prices" app, you can give each product a name (optional), enter the price, quantity, and number of units for each item. The app will automatically calculate the price based on the total product quantity and the currency obtained by the chosen currency. Items are then sorted based on the best value so you can easily find the best price.
+With the "Compare Prices" (Compara precios) app, you can give each product a name (optional), enter the price, quantity, and number of units for each item. The app will automatically calculate the price based on the total product quantity and the currency obtained by the chosen currency. Items are then sorted based on the best value so you can easily find the best price.
 
 Features include:
 * 4 types of units (Weight, Volume, Length, and Pieces).

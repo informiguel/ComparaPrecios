@@ -19,6 +19,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import java.math.RoundingMode;
 import java.text.DecimalFormat;
 import java.util.ArrayList;
+import android.app.ActivityOptions;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -160,8 +161,7 @@ public class MainActivity extends AppCompatActivity {
                         0  // Animación de salida
                 );
             } else {
-                // Usa la API obsoleta para dispositivos más antiguos
-                // noinspection deprecation
+                // Usa el método obsoleto para APIs < 34.
                 overridePendingTransition(0, 0);
             }
             startActivity(intent);

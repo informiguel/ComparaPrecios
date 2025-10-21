@@ -1,1 +1,17 @@
+pluginManagement {
+    repositories {
+        // CLAVE: Asegura que el plugin de Android se pueda encontrar
+        google()
+        gradlePluginPortal()
+        mavenCentral()
+    }
+}
+dependencyResolutionManagement {
+    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+    repositories {
+        google()
+        mavenCentral()
+    }
+}
+rootProject.name = "ComparaPrecios"
 include ':app'

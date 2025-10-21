@@ -142,23 +142,23 @@ Consulta el archivo LICENSE  y NOTICE para más detalles.
 © 2025 Asturias, España
 
 ## ⚙️ Desarrollo
-Android Studio Narwhal 3 Feature Drop | 2025.1.3\
-Build #AI-251.26094.121.2513.14007798, built on August 28, 2025\
-Runtime version: 21.0.7+-13880790-b1038.58 amd64\
-VM: OpenJDK 64-Bit Server VM by JetBrains s.r.o.\
-Toolkit: sun.awt.windows.WToolkit\
-Windows 10.0\
-Kotlin plugin: K2 mode\
-GC: G1 Young Generation, G1 Concurrent GC, G1 Old Generation\
-Memory: 2048M\
-Cores: 4\
-Registry:\
-ide.experimental.ui=true\
+Android Studio Narwhal 3 Feature Drop | 2025.1.3
+Build #AI-251.26094.121.2513.14007798, built on August 28, 2025
+Runtime version: 21.0.7+-13880790-b1038.58 amd64
+VM: OpenJDK 64-Bit Server VM by JetBrains s.r.o.
+Toolkit: sun.awt.windows.WToolkit
+Windows 10.0
+Kotlin plugin: K2 mode
+GC: G1 Young Generation, G1 Concurrent GC, G1 Old Generation
+Memory: 2048M
+Cores: 4
+Registry:
+ide.experimental.ui=true
 
-Temurin® JDK:  https://adoptium.net/temurin/releases/ \
-JAVA_HOME C:\Program Files\Eclipse Adoptium\jdk-21.0.8.9-hotspot\
+Temurin® JDK (17-LTS):  https://adoptium.net/temurin/releases/ \
+JAVA_HOME C:\Program Files\Java\jdk-17.0.16+8
 Android Studio: Settings -> Build, Execution, Deployment -> Build Tools -> Gradle and set the Gradle JDK to JAVA_HOME\
-sourceCompatibility JavaVersion.VERSION_21
+sourceCompatibility JavaVersion.VERSION_17
 
 ---
 
